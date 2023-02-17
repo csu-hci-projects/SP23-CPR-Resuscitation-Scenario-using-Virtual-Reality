@@ -17,14 +17,18 @@ All relevant code to welcome our particpants to the study and provide all necess
 All education should be completed for CPR purpose, AED purpose, crisis recognition, preliminary response, CPR process, AED process, and recovery.
 
 ##### Checkpoint 4:
-04/14/2023- CPR Administration Module:
-Create the scenario complete with environment setup, initial briefing, victim creation, resource manipulation, audio output, and all relevant measures (timer, step-by-step Q&A analysis, etc.).
+04/01/2023- CPR Administration Module Part 1:
+Create the scenario compelete with virtual environment setup and initial briefing.
 
 ##### Checkpoint 5:
+04/14/2023- CPR Administration Module Part 2:
+Add interaction details such as victim creation, resource manipulation, audio output, and all relevant measures (timer, step-by-step Q&A analysis, etc.).
+
+##### Checkpoint 6:
 04/21/2023- Post-Module Questionnaire:
 Create post-module questionnaire to acquire participant "overall experience", "new CPR comfort level", and "recommendations for improvement".
 
-##### Checkpoint 6:
+##### Checkpoint 7:
 05/05/2023- Calculations and Visualizations:
 Finalize all calculations complete with relevant graphs and other metrics such as mean, standard deviation, and assertion about statisical significance.
 
