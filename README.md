@@ -9,11 +9,11 @@ Using Virtual Reality technology we want to test if the average person can benef
 All dependencies and integrations are fully installed and ready for use for all team members
 
 ##### Checkpoint 2:
-03/10/2023- Welcome and Pre-Module Questionnaire:
+03/03/2023- Welcome and Pre-Module Questionnaire:
 All relevant code to welcome our particpants to the study and provide all necessary research details. In addition the pre-module questionnaire should be fully created. This questionnaire should generate a random "Participant ID", query participants "age" and "base CPR comfort level".
 
 ##### Checkpoint 3:
-03/24/2023- Education segment:
+03/17/2023- Education segment:
 All education should be completed for CPR purpose, AED purpose, crisis recognition, preliminary response, CPR process, AED process, and recovery.
 
 ##### Checkpoint 4:
