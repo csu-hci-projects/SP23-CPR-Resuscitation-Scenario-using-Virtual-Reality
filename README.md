@@ -6,10 +6,10 @@ Using Virtual Reality technology we want to test if the average person can benef
 ============================================================
 ## Timeline
 <details><summary>Checkpoint 1: 02/25/2023</summary>
-<p>
+  
 __Environment setup:__
 All dependencies and integrations are fully installed and ready for use for all team members
-</p>
+
 </details>
 
 ##### Checkpoint 2: 03/03/2023
