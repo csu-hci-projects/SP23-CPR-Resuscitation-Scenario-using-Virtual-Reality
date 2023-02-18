@@ -1,5 +1,5 @@
 _These Dependancies have been added to the .gitignore file.  
-In order to commit changes to these assets, package modified assets into Assets/GitHubAssets/Prefabs.  
+In order to commit changes to these assets, package modified assets into a prefab and move into Assets/GitHubAssets/Prefabs.  
 If adding a new Asset from from the Unity store, please add the store asset to the .gitignore file._
 
 ## List of Required Packages  
