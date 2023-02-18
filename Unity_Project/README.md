@@ -1,3 +1,6 @@
+_These Dependancies have been added to gitignore, in order to commit changes, package modified assets into prefabs and place in root of Assets.  
+If adding a new Asset from from the Unity store, please add the asset to the gitignore file._
+
 ## List of Required Packages  
 #### *- Downloadable from the Unity Asset Store -*  
 - Didimo - 3D Male Avatars - https://assetstore.unity.com/packages/3d/characters/humanoids/humans/didimo-3d-male-avatars-220165    
