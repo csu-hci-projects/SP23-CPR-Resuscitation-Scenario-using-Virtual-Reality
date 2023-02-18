@@ -5,7 +5,7 @@ Using Virtual Reality technology we want to test if the average person can benef
 
 
 ## Timeline
-_click on arrow for details_
+_click on checkpoint for details_
 <details><summary>Checkpoint 1: 02/25/2023</summary>
   
 ***Environment setup:***
