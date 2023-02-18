@@ -6,13 +6,17 @@ Using Virtual Reality technology we want to test if the average person can benef
 ============================================================
 ## Timeline
 <details><summary>Checkpoint 1: 02/25/2023</summary>
+  
 __Environment setup:__
 All dependencies and integrations are fully installed and ready for use for all team members
+  
 </details>
 
 <details><summary>Checkpoint 2: 03/03/2023</summary>
+  
 ***Welcome and Pre-Module Questionnaire:***
 All relevant code to welcome our particpants to the study and provide all necessary research details. In addition the pre-module questionnaire should be fully created. This questionnaire should generate a random "Participant ID", query participants "age" and "base CPR comfort level".
+  
 </details>
 
 <details><summary>Checkpoint 3: 03/17/2023</summary>
