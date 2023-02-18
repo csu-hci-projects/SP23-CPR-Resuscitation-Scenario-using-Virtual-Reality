@@ -7,7 +7,7 @@ Using Virtual Reality technology we want to test if the average person can benef
 ## Timeline
 <details><summary>Checkpoint 1: 02/25/2023</summary>
   
-__Environment setup:__
+***Environment setup:***
 All dependencies and integrations are fully installed and ready for use for all team members
   
 </details>
@@ -20,6 +20,7 @@ All relevant code to welcome our particpants to the study and provide all necess
 </details>
 
 <details><summary>Checkpoint 3: 03/17/2023</summary>
+  
 ***Education segment:***
 All education should be completed for CPR purpose, AED purpose, crisis recognition, preliminary response, CPR process, AED process, and recovery.
 </details>
