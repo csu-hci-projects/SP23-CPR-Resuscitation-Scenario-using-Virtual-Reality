@@ -9,7 +9,7 @@ Environment setup:
 All dependencies and integrations are fully installed and ready for use for all team members
 
 ##### Checkpoint 2: 03/03/2023
-_Welcome and Pre-Module Questionnaire:_
+__Welcome and Pre-Module Questionnaire:__
 All relevant code to welcome our particpants to the study and provide all necessary research details. In addition the pre-module questionnaire should be fully created. This questionnaire should generate a random "Participant ID", query participants "age" and "base CPR comfort level".
 
 ##### Checkpoint 3: 03/17/2023
