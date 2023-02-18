@@ -3,8 +3,9 @@
 ## Introduction/Overview
 Using Virtual Reality technology we want to test if the average person can benefit from a computer-based training for Cardiopulmonary Resuscitation. Each participant will provide subjective responses in the form of a questionnaire before and after the training module. In addition each particpant will be measured for accuracy and timing for more objective calculations.
 
+============================================================
 ## Timeline
-##### Checkpoint 1: 02/25/2023
+<details><summary>##### Checkpoint 1: 02/25/2023</summary>
 Environment setup:
 All dependencies and integrations are fully installed and ready for use for all team members
 
