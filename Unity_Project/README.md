@@ -1,4 +1,4 @@
-_These Dependancies have been added to gitignore, in order to commit changes, package modified assets into prefabs and place in root of Assets.  
+_These Dependancies have been added to gitignore. In order to commit changes to these assets, package modified assets into prefabs and place in root of Assets.  
 If adding a new Asset from from the Unity store, please add the asset to the gitignore file._
 
 ## List of Required Packages  
