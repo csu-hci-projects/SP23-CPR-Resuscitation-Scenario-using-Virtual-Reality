@@ -3368,7 +3368,7 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -40
+    limit: -26.139364
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
@@ -3379,11 +3379,11 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_Swing1Limit:
-    limit: 42.099094
+    limit: 23.64554
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 70.108894
+    limit: 33.24471
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0
@@ -3508,10 +3508,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 279496055}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70e8558d7ccf66641b0a0dfef074d245, type: 3}
+  m_Script: {fileID: 11500000, guid: c005ba8f13749aa4487ece0a71a9b630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 279496058}
+  rb: {fileID: 0}
   rbVelocity: {x: 0, y: 0, z: 0}
 --- !u!1 &281510795
 GameObject:
