@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Oculus/Interaction/Samples/Scenes/Examples/HandGrabUseExamples.unity
-    guid: 509f8fa80c708b343a603a4771d35c85
+    path: Assets/Scenes/StartMenu.unity
+    guid: 4ecde28e5266943a280c61a961fa38e8
+  - enabled: 1
+    path: Assets/Scenes/CPR-Module.unity
+    guid: 1b2d3f90c0f50b94cb910c66c773d00d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 1a4c68ca72a83449f938d669337cb305, type: 2}
