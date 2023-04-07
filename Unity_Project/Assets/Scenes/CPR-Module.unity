@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028377, g: 0.22571409, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6804,16 +6804,16 @@ MonoBehaviour:
   LeftEyeManualTransform: {fileID: 0}
   RightEyeManualTransform: {fileID: 0}
   LeftEyeHoleMatrix:
-    e00: -0.005735721
-    e01: -0.0005342793
+    e00: -0.005735798
+    e01: -0.00053425494
     e02: 0.91073567
-    e03: 0.3226051
-    e10: 0.0000015177776
-    e11: -0.0039225253
+    e03: 0.32260516
+    e10: 0.0000014268008
+    e11: -0.003922501
     e12: -0.24461943
     e13: 2.131252
-    e20: 0.0122785475
-    e21: -0.00025383415
+    e20: 0.012278512
+    e21: -0.0002538574
     e22: 0.8025377
     e23: 6.1598597
     e30: 0
@@ -6821,16 +6821,16 @@ MonoBehaviour:
     e32: 0
     e33: 1
   RightEyeHoleMatrix:
-    e00: -0.011338848
-    e01: -0.00032452372
+    e00: -0.011338849
+    e01: -0.00032452814
     e02: 0.91073567
     e03: 0.3728175
-    e10: 0.00072006846
-    e11: -0.0033488253
+    e10: 0.0007201278
+    e11: -0.0033487752
     e12: -0.24461943
     e13: 2.1304247
-    e20: 0.007371301
-    e21: -0.0003673505
+    e20: 0.007371278
+    e21: -0.00036733414
     e22: 0.8025377
     e23: 6.1026807
     e30: 0
@@ -22854,9 +22854,9 @@ MonoBehaviour:
   _maxIterationsPerFrame: 3
   _data: {fileID: 0}
   _pointTransform: {fileID: 1716818424}
-  _radius: 0.005
-  _touchReleaseThreshold: 0.002
-  _equalDistanceThreshold: 0.001
+  _radius: 0.001
+  _touchReleaseThreshold: 0.0001
+  _equalDistanceThreshold: 0.0001
 --- !u!114 &692432837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48161,9 +48161,9 @@ MonoBehaviour:
   _maxIterationsPerFrame: 3
   _data: {fileID: 0}
   _pointTransform: {fileID: 1747873560}
-  _radius: 0.005
-  _touchReleaseThreshold: 0.002
-  _equalDistanceThreshold: 0.001
+  _radius: 0.001
+  _touchReleaseThreshold: 0.0001
+  _equalDistanceThreshold: 0.0001
 --- !u!114 &1538394869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63936,8 +63936,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c005ba8f13749aa4487ece0a71a9b630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 2098176003}
   rbVelocity: {x: 0, y: 0, z: 0}
+  rbRotation: {x: 0, y: 0, z: 0}
 --- !u!114 &2098176005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63972,11 +63973,11 @@ CharacterJoint:
     spring: 0
     damper: 0
   m_LowTwistLimit:
-    limit: -26.139364
+    limit: 23.909456
     bounciness: 0
     contactDistance: 0
   m_HighTwistLimit:
-    limit: 25
+    limit: 66.3044
     bounciness: 0
     contactDistance: 0
   m_SwingLimitSpring:
@@ -63987,7 +63988,7 @@ CharacterJoint:
     bounciness: 0
     contactDistance: 0
   m_Swing2Limit:
-    limit: 33.24471
+    limit: 21.769377
     bounciness: 0
     contactDistance: 0
   m_EnableProjection: 0

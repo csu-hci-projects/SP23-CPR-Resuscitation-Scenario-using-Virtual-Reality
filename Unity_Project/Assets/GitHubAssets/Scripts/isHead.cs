@@ -10,11 +10,16 @@ public class isHead : MonoBehaviour
 
     public Rigidbody rb;
     public Vector3 rbVelocity;
+    public Vector3 rbRotation;
+    Quaternion rotation_value;
 
 void Start() {
   rb = GetComponent<Rigidbody>();
+  rotation_value=transform.rotation;
+    rbRotation=rotation_value.eulerAngles;
+    Debug.Log(rbRotation);
 }
- 
+
 void FixedUpdate ()
 {
     rbVelocity = rb.velocity;
@@ -28,6 +33,10 @@ void FixedUpdate ()
     {
         isMoving = true;
     }
+    rotation_value=transform.rotation;
+    rbRotation=rotation_value.eulerAngles;
+    Debug.Log(rbRotation);
+    
 }
 
 public void freezePosition() {
@@ -35,5 +44,5 @@ public void freezePosition() {
     rb.constraints = RigidbodyConstraints.FreezePosition;
 }
 
-}
 
+}
