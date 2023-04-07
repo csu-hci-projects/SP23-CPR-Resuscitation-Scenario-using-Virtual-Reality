@@ -5466,7 +5466,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Exit()
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 680800307}
@@ -6706,7 +6706,7 @@ Transform:
   m_GameObject: {fileID: 281012076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.208, y: 0.287, z: 0.058}
-  m_LocalScale: {x: 1.5697379, y: 0.462672, z: 1}
+  m_LocalScale: {x: 3, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 454408597}
@@ -47050,7 +47050,7 @@ Transform:
   m_GameObject: {fileID: 1641212831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.2207, y: 0.735, z: -0.118}
-  m_LocalScale: {x: 0.74325645, y: 0.586922, z: 1}
+  m_LocalScale: {x: 3, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 706375549}
@@ -56328,7 +56328,7 @@ Transform:
   m_GameObject: {fileID: 1954837648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.3327, y: -0.749, z: -0.621}
-  m_LocalScale: {x: 1.8635526, y: 0.56937397, z: 1}
+  m_LocalScale: {x: 3, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1873979342}
