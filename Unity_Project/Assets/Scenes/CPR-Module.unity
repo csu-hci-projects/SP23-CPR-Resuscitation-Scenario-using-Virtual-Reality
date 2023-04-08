@@ -28752,7 +28752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &911453770
 Transform:
   m_ObjectHideFlags: 0
@@ -55063,14 +55063,14 @@ MonoBehaviour:
   _physicsGrabbable: {fileID: 0}
   _scoringModifier:
     _positionRotationWeight: 0
-  _supportedGrabTypes: 2
+  _supportedGrabTypes: -1
   _pinchGrabRules:
     _thumbRequirement: 0
     _indexRequirement: 1
     _middleRequirement: 1
     _ringRequirement: 1
     _pinkyRequirement: 1
-    _unselectMode: 0
+    _unselectMode: 1
   _palmGrabRules:
     _thumbRequirement: 0
     _indexRequirement: 1
@@ -55079,7 +55079,7 @@ MonoBehaviour:
     _pinkyRequirement: 0
     _unselectMode: 0
   _movementProvider: {fileID: 0}
-  _handAligment: 1
+  _handAligment: 0
   _handGrabPoses:
   - {fileID: 1771414562}
 --- !u!1 &1774057044
@@ -63938,7 +63938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2098176003}
   rbVelocity: {x: 0, y: 0, z: 0}
-  rbRotation: {x: 0, y: 0, z: 0}
+  rbRotationX: {x: 0, y: 0, z: 0}
 --- !u!114 &2098176005
 MonoBehaviour:
   m_ObjectHideFlags: 0
