@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4084655755513865405}
   - component: {fileID: 4414194722318069882}
-  - component: {fileID: 674761772854553569}
   - component: {fileID: 7981879811819187723}
   m_Layer: 5
   m_Name: Image
@@ -47,33 +46,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2157867026263049746}
   m_CullTransparentMesh: 1
---- !u!114 &674761772854553569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2157867026263049746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.03529412, g: 0.54901963, b: 0.627451, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 3bbcc5c066b684f3aa4057725105f112, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
 --- !u!114 &7981879811819187723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +252,7 @@ RectTransform:
   - {fileID: 2979873808369352709}
   - {fileID: 7193901823977357843}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 22, y: -40.624, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
