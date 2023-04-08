@@ -17275,8 +17275,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544565185}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35, y: -303, z: -295}
+  m_LocalRotation: {x: 0.16489922, y: 0.00000017881389, z: 0.0016208065, w: 0.98630905}
+  m_LocalPosition: {x: 37.033783, y: -305.7062, z: -501.3442}
   m_LocalScale: {x: 60.000004, y: 60.000004, z: 60.000004}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -17285,7 +17285,7 @@ Transform:
   - {fileID: 1407059427}
   m_Father: {fileID: 1017614055}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 18.983, y: 0.032, z: 0.194}
 --- !u!114 &544565187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17379,18 +17379,6 @@ MonoBehaviour:
           m_StringArgument: Restart()
           m_BoolArgument: 1
         m_CallState: 0
-      - m_Target: {fileID: 97772569}
-        m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.OVR.Samples
-        m_MethodName: PlayAudio
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 8459937172340270311}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -17414,6 +17402,30 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 97772569}
+        m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.OVR.Samples
+        m_MethodName: PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1770670769}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
   _whenHover:
     m_PersistentCalls:
@@ -32560,7 +32572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6570971039455433360, guid: afb1615dd3b243a449003594175d971a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.257
+      value: -3.806
       objectReference: {fileID: 0}
     - target: {fileID: 6570971039455433360, guid: afb1615dd3b243a449003594175d971a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -32568,7 +32580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6570971039455433360, guid: afb1615dd3b243a449003594175d971a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.417
+      value: -0.392
       objectReference: {fileID: 0}
     - target: {fileID: 6570971039455433360, guid: afb1615dd3b243a449003594175d971a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -47933,6 +47945,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1951144020}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _whenHover:
     m_PersistentCalls:
       m_Calls: []
@@ -55303,6 +55327,11 @@ Transform:
   m_Father: {fileID: 2061348302}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1770670769 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5385430629427633694, guid: 3181eb930f38eb7478bc2a19f785a48f, type: 3}
+  m_PrefabInstance: {fileID: 1875456256}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1771414560
 GameObject:
   m_ObjectHideFlags: 0
@@ -59387,7 +59416,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5079371321587524429, guid: 3181eb930f38eb7478bc2a19f785a48f, type: 3}
   m_PrefabInstance: {fileID: 1875456256}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1770670769}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4462db6b836045640a882a2a4e4022f7, type: 3}
@@ -60585,18 +60614,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.OVR.Samples
         m_MethodName: PlayAudio
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1951144020}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
