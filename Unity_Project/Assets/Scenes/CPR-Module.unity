@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028377, g: 0.22571409, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7477,16 +7477,16 @@ MonoBehaviour:
   LeftEyeManualTransform: {fileID: 0}
   RightEyeManualTransform: {fileID: 0}
   LeftEyeHoleMatrix:
-    e00: -0.005735798
-    e01: -0.00053425494
+    e00: -0.005735721
+    e01: -0.0005342793
     e02: 0.91073567
-    e03: 0.32260516
-    e10: 0.0000014268008
-    e11: -0.003922501
+    e03: 0.3226051
+    e10: 0.0000015177776
+    e11: -0.0039225253
     e12: -0.24461943
     e13: 2.131252
-    e20: 0.012278512
-    e21: -0.0002538574
+    e20: 0.0122785475
+    e21: -0.00025383415
     e22: 0.8025377
     e23: 6.1598597
     e30: 0
@@ -7494,16 +7494,16 @@ MonoBehaviour:
     e32: 0
     e33: 1
   RightEyeHoleMatrix:
-    e00: -0.011338849
-    e01: -0.00032452814
+    e00: -0.011338848
+    e01: -0.00032452372
     e02: 0.91073567
     e03: 0.3728175
-    e10: 0.0007201278
-    e11: -0.0033487752
+    e10: 0.00072006846
+    e11: -0.0033488253
     e12: -0.24461943
     e13: 2.1304247
-    e20: 0.007371278
-    e21: -0.00036733414
+    e20: 0.007371301
+    e21: -0.0003673505
     e22: 0.8025377
     e23: 6.1026807
     e30: 0
@@ -25823,7 +25823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2904843611855666521, guid: afb1615dd3b243a449003594175d971a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3281200013509369541, guid: afb1615dd3b243a449003594175d971a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -30831,7 +30831,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869574133}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: a314979ac38df427b9c3f1e60a1f94b3, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 98a192482b7e14d5891981949e2c7e3d, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -59103,9 +59103,9 @@ MonoBehaviour:
   _whenRelease:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1785853942}
+      - m_Target: {fileID: 1785853941}
         m_TargetAssemblyTypeName: UnityEngine.Video.VideoPlayer, UnityEngine
-        m_MethodName: Play
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -63615,7 +63615,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785853941}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 54cf8d11f63ea4149aec6170eb672010, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 0367e462afe9641f7add32c810c41be0, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
