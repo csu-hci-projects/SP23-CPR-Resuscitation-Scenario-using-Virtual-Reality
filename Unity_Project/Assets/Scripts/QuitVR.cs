@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class startScene : MonoBehaviour
+public class QuitModule : MonoBehaviour
 {
-    public void Start()
+    public void Quit()
     {
-        SceneManager.LoadScene("CPR-Module");
+        SceneManager.LoadScene("PostAssesment");
     }
 
 }
