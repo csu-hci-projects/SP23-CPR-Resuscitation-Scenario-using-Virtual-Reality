@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentQuestionToggleGroup: {fileID: 0}
-  currentSceneIndex: 4
+  currentSceneIndex: 26
 --- !u!114 &862762865
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -593,7 +593,7 @@ GameObject:
   - component: {fileID: 1216218005}
   - component: {fileID: 1216218004}
   m_Layer: 5
-  m_Name: Introduction
+  m_Name: Instruction Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -616,7 +616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 61, y: -305}
+  m_AnchoredPosition: {x: 61, y: -224.4}
   m_SizeDelta: {x: 411.4695, y: 52.114685}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1216218004
@@ -639,8 +639,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This is where both VR and Video Users converge back into the same scene
-    line
+  m_text: Now let's test your CPR knowledge. Please select one answer for each question.
+    You may use the forward and back buttons to complete the assesment.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -729,7 +729,7 @@ GameObject:
   - component: {fileID: 1226584661}
   - component: {fileID: 1226584660}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Pre-Module Assessment Instructions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -752,7 +752,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 61, y: -111}
+  m_AnchoredPosition: {x: 61, y: -96}
   m_SizeDelta: {x: 411.4695, y: 52.114685}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1226584660
@@ -775,10 +775,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Thank you for participating
-
-    Please finish by filling out the following
-    questionnaire and assessment'
+  m_text: Congratulations for completing the training!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -805,8 +802,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 31
+  m_fontSizeBase: 31
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1138,7 +1135,6 @@ GameObject:
   - component: {fileID: 2133137028}
   - component: {fileID: 2133137027}
   - component: {fileID: 2133137026}
-  - component: {fileID: 2133137025}
   - component: {fileID: 2133137031}
   m_Layer: 5
   m_Name: Canvas
@@ -1147,20 +1143,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2133137025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2133137024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bfe115a998d3e84698469bc8f4c48cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentQuestionToggleGroup: {fileID: 0}
-  currentSceneIndex: 0
 --- !u!114 &2133137026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1174,7 +1156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentQuestionToggleGroup: {fileID: 0}
-  currentSceneIndex: 0
+  currentSceneIndex: 36
 --- !u!114 &2133137027
 MonoBehaviour:
   m_ObjectHideFlags: 0
