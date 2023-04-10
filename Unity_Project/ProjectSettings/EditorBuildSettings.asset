@@ -77,21 +77,33 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Training.unity
     guid: 82bd0bd7928b19846b9400c1154aa2d1
+  - enabled: 1
+    path: Assets/Scenes/VOTTraining/VOT1-Intro.unity
+    guid: 60a502748e34665418b2bad808688e86
+  - enabled: 1
+    path: Assets/Scenes/VOTTraining/VOT2-D is for Danger.unity
+    guid: e6b96f1c92a615e43a68aad7e47fd77c
+  - enabled: 1
+    path: Assets/Scenes/VOTTraining/VOT3- R is for Response.unity
+    guid: c804f54b747ad794180cec3b305a8f48
+  - enabled: 1
+    path: Assets/Scenes/VOTTraining/VOT4- Shout for Help.unity
+    guid: a70bfdd0be160d24d9e271655c653160
+  - enabled: 1
+    path: Assets/Scenes/VOTTraining/VOT5- A is for Airway.unity
+    guid: a196381882f63d845aa3b2e7841be128
+  - enabled: 1
+    path: Assets/Scenes/VOTTraining/VOT6- B is for Breathing.unity
+    guid: 457c4a3562bb3d349a69f447cf6f769a
+  - enabled: 1
+    path: Assets/Scenes/VOTTraining/VOT7- C is for Circulation.unity
+    guid: 1899222ecadca8f40886802f753cc1f4
+  - enabled: 1
+    path: Assets/Scenes/VOTTraining/VOT8- Recap.unity
+    guid: 8e61dc972b193814199db17bdc635740
   - enabled: 0
     path: Assets/Scenes/CPR-Module.unity
     guid: 682be804922c6e24190783984cd68f5f
-  - enabled: 1
-    path: Assets/Scenes/ThankYou.unity
-    guid: 59f609630c165c14ca324589c048efc6
-  - enabled: 1
-    path: Assets/Scenes/PostCPR.unity
-    guid: 38c7449df6cc19b4b804cf355a7b623a
-  - enabled: 1
-    path: Assets/Scenes/PostEXP.unity
-    guid: a7a4d37629aa50347bad345ce93c8bd0
-  - enabled: 1
-    path: Assets/Scenes/PostFeedback.unity
-    guid: db64872c21e16954395f1976e84f52fd
   - enabled: 1
     path: Assets/Scenes/PostAssesment.unity
     guid: 636ab3fd1193ce446a91ece4c1a15a77
@@ -140,6 +152,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PostAssesment/Q15POST.unity
     guid: 2008a4e2d08d0584ebead08f9ee243f3
+  - enabled: 1
+    path: Assets/Scenes/PostCPR.unity
+    guid: 736abb2f0e79eb54b9f9ba17e8142e68
+  - enabled: 1
+    path: Assets/Scenes/PostEXP.unity
+    guid: a7a4d37629aa50347bad345ce93c8bd0
+  - enabled: 1
+    path: Assets/Scenes/PostFeedback.unity
+    guid: db64872c21e16954395f1976e84f52fd
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: 6cbbc852a85bf2942a9a678f32ed5b40
