@@ -86,69 +86,69 @@ public class DataProcess : MonoBehaviour
                     break;
             }
         }
-        else if (currentSceneIndex >= 25 && currentSceneIndex <= 27)
+        else if (currentSceneIndex >= 48 && currentSceneIndex <= 50)
         {
             switch (currentSceneIndex)
             {
-                case 25:
+                case 48:
                     DataManager.Instance.PostCPR = answer;
                     break;
-                case 26:
+                case 49:
                     DataManager.Instance.PostEXP = answer;
                     break;
-                case 27:
+                case 50:
                     DataManager.Instance.PostFeed = answer;
                     break;
             }
         }
 
-        else if (currentSceneIndex >= 29 && currentSceneIndex <= 43)
+        else if (currentSceneIndex >= 33 && currentSceneIndex <= 47)
         {
             switch (currentSceneIndex)
             {
-                case 29:
+                case 33:
                     DataManager.Instance.q1_post = answer;
                     break;
-                case 30:
+                case 34:
                     DataManager.Instance.q2_post = answer;
                     break;
-                case 31:
+                case 35:
                     DataManager.Instance.q3_post = answer;
                     break;
-                case 32:
+                case 36:
                     DataManager.Instance.q4_post = answer;
                     break;
-                case 33:
+                case 37:
                     DataManager.Instance.q5_post = answer;
                     break;
-                case 34:
+                case 38:
                     DataManager.Instance.q6_post = answer;
                     break;
-                case 35:
+                case 39:
                     DataManager.Instance.q7_post = answer;
                     break;
-                case 36:
+                case 40:
                     DataManager.Instance.q8_post = answer;
                     break;
-                case 37:
+                case 41:
                     DataManager.Instance.q9_post = answer;
                     break;
-                case 38:
+                case 42:
                     DataManager.Instance.q10_post = answer;
                     break;
-                case 39:
+                case 43:
                     DataManager.Instance.q11_post = answer;
                     break;
-                case 40:
+                case 44:
                     DataManager.Instance.q12_post = answer;
                     break;
-                case 41:
+                case 45:
                     DataManager.Instance.q13_post = answer;
                     break;
-                case 42:
+                case 46:
                     DataManager.Instance.q14_post = answer;
                     break;
-                case 43:
+                case 47:
                     DataManager.Instance.q15_post = answer;
                     break;
             }
@@ -158,7 +158,7 @@ public class DataProcess : MonoBehaviour
         {
             Debug.LogError("Invalid scene index");
         }
-            if (currentSceneIndex <= 43)
+            if (currentSceneIndex <= 50)
         {
             SceneManager.LoadScene(currentSceneIndex + 1);
         }
@@ -176,6 +176,7 @@ public class DataProcess : MonoBehaviour
             DataManager.Instance.q12_post, DataManager.Instance.q13_post, DataManager.Instance.q14_post, DataManager.Instance.q15_post));
 
         Debug.Log(DataManager.Instance.age + " " + DataManager.Instance.gender + " " + DataManager.Instance.education + " " + DataManager.Instance.VRScale + " " + DataManager.Instance.CPRScale);
+        SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
     IEnumerator Post(string Age, string Gender, string Education, string vrscale, string cprscale,
