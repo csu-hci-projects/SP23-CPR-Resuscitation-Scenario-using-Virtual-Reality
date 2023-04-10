@@ -2270,6 +2270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 2006225035}
+  button: {fileID: 0}
 --- !u!1001 &76898402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11895,6 +11896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 869574134}
+  button: {fileID: 1501355004}
 --- !u!114 &378070447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11935,13 +11937,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1501355004}
-        m_TargetAssemblyTypeName: Oculus.Interaction.AudioTrigger, Oculus.Interaction.OVR.Samples
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 11500000, guid: 15fc4152b42004f1fba6436b249cd3de, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -19149,6 +19151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 869980182}
+  button: {fileID: 0}
 --- !u!1 &544565185
 GameObject:
   m_ObjectHideFlags: 0
@@ -44997,6 +45000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1135440039}
+  button: {fileID: 0}
 --- !u!1 &1218691535
 GameObject:
   m_ObjectHideFlags: 0
@@ -45530,6 +45534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 7867312073275669334}
+  button: {fileID: 0}
 --- !u!114 &1238170144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54254,6 +54259,8 @@ GameObject:
   - component: {fileID: 1501355005}
   - component: {fileID: 1501355006}
   - component: {fileID: 1501355007}
+  - component: {fileID: 1501355009}
+  - component: {fileID: 1501355008}
   m_Layer: 0
   m_Name: Next
   m_TagString: Untagged
@@ -54438,6 +54445,34 @@ MonoBehaviour:
   _whenCancel:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1501355008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501355004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15fc4152b42004f1fba6436b249cd3de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 0}
+  button: {fileID: 0}
+--- !u!114 &1501355009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501355004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15fc4152b42004f1fba6436b249cd3de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 869574134}
+  button: {fileID: 0}
 --- !u!1 &1505600510
 GameObject:
   m_ObjectHideFlags: 0
@@ -58831,6 +58866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1738820570}
+  button: {fileID: 0}
 --- !u!1 &1653881706
 GameObject:
   m_ObjectHideFlags: 0
@@ -59087,6 +59123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1785853942}
+  button: {fileID: 0}
 --- !u!114 &1659195790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71402,6 +71439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 879200125}
+  button: {fileID: 0}
 --- !u!1 &1998101016
 GameObject:
   m_ObjectHideFlags: 0
