@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class startScene : MonoBehaviour
 {
-    public void Start()
+    public void QuitVR()
     {
-        SceneManager.LoadScene("CPR-Module");
+        SceneManager.LoadScene("PostAssesment");
     }
 
 }

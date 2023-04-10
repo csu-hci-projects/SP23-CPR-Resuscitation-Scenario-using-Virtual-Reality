@@ -73535,6 +73535,50 @@ Transform:
   m_Father: {fileID: 1651671021}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2074081446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2074081447}
+  - component: {fileID: 2074081448}
+  m_Layer: 0
+  m_Name: QuitVR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2074081447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074081446}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2130818566}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2074081448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074081446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e95b4d6aa4aa1420facbe245f8d8545c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2074865541
 GameObject:
   m_ObjectHideFlags: 0
@@ -74998,7 +75042,8 @@ GameObject:
   - component: {fileID: 2130818566}
   - component: {fileID: 2130818567}
   - component: {fileID: 2130818569}
-  - component: {fileID: 2130818568}
+  - component: {fileID: 2130818571}
+  - component: {fileID: 2130818570}
   m_Layer: 0
   m_Name: Exit Simulation
   m_TagString: Untagged
@@ -75022,6 +75067,7 @@ Transform:
   - {fileID: 157532283}
   - {fileID: 444548842}
   - {fileID: 2089051481}
+  - {fileID: 2074081447}
   m_Father: {fileID: 617801567}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -75090,18 +75136,6 @@ MonoBehaviour:
     ExitDistance: 0.02
     ReEnterDistance: 0.02
   _tiebreakerScore: 0
---- !u!114 &2130818568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130818565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c2689ef7b2774a2f87184afad689c77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2130818569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75118,9 +75152,9 @@ MonoBehaviour:
   _whenRelease:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2089051480}
-        m_TargetAssemblyTypeName: EndMenu, Assembly-CSharp
-        m_MethodName: exitgame
+      - m_Target: {fileID: 2074081448}
+        m_TargetAssemblyTypeName: startScene, Assembly-CSharp
+        m_MethodName: QuitVR
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -75184,6 +75218,30 @@ MonoBehaviour:
   _whenCancel:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2130818570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130818565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e95b4d6aa4aa1420facbe245f8d8545c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2130818571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130818565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e95b4d6aa4aa1420facbe245f8d8545c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2135950936
 GameObject:
   m_ObjectHideFlags: 0
