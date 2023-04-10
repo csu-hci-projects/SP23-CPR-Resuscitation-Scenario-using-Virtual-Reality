@@ -14,141 +14,141 @@ public class DataProcess : MonoBehaviour
     public void Next()
     {
         string answer = currentQuestionToggleGroup.GetFirstActiveToggle().name;
-        if (currentSceneIndex >= 2 && currentSceneIndex <= 6)
+        if (currentSceneIndex >= 3 && currentSceneIndex <= 7)
         {
             switch (currentSceneIndex)
             {
-                case 2:
+                case 3:
                     DataManager.Instance.age = answer;
                     break;
-                case 3:
+                case 4:
                     DataManager.Instance.gender = answer;
                     break;
-                case 4:
+                case 5:
                     DataManager.Instance.education = answer;
                     break;
-                case 5:
+                case 6:
                     DataManager.Instance.VRScale = answer;
                     break;
-                case 6:
+                case 7:
                     DataManager.Instance.CPRScale = answer;
                     break;
             }
         }
-        else if (currentSceneIndex >= 8 && currentSceneIndex <= 22)
+        else if (currentSceneIndex >= 9 && currentSceneIndex <= 23)
         {
             switch (currentSceneIndex)
             {
-                case 8:
+                case 9:
                     DataManager.Instance.q1_pre = answer;
                     break;
-                case 9:
+                case 10:
                     DataManager.Instance.q2_pre = answer;
                     break;
-                case 10:
+                case 11:
                     DataManager.Instance.q3_pre = answer;
                     break;
-                case 11:
+                case 12:
                     DataManager.Instance.q4_pre = answer;
                     break;
-                case 12:
+                case 13:
                     DataManager.Instance.q5_pre = answer;
                     break;
-                case 13:
+                case 14:
                     DataManager.Instance.q6_pre = answer;
                     break;
-                case 14:
+                case 15:
                     DataManager.Instance.q7_pre = answer;
                     break;
-                case 15:
+                case 16:
                     DataManager.Instance.q8_pre = answer;
                     break;
-                case 16:
+                case 17:
                     DataManager.Instance.q9_pre = answer;
                     break;
-                case 17:
+                case 18:
                     DataManager.Instance.q10_pre = answer;
                     break;
-                case 18:
+                case 19:
                     DataManager.Instance.q11_pre = answer;
                     break;
-                case 19:
+                case 20:
                     DataManager.Instance.q12_pre = answer;
                     break;
-                case 20:
+                case 21:
                     DataManager.Instance.q13_pre = answer;
                     break;
-                case 21:
+                case 22:
                     DataManager.Instance.q14_pre = answer;
                     break;
-                case 22:
+                case 23:
                     DataManager.Instance.q15_pre = answer;
                     break;
             }
         }
-        else if (currentSceneIndex >= 48 && currentSceneIndex <= 50)
+        else if (currentSceneIndex >= 52 && currentSceneIndex <= 54)
         {
             switch (currentSceneIndex)
             {
-                case 48:
+                case 52:
                     DataManager.Instance.PostCPR = answer;
                     break;
-                case 49:
+                case 53:
                     DataManager.Instance.PostEXP = answer;
                     break;
-                case 50:
+                case 54:
                     DataManager.Instance.PostFeed = answer;
                     break;
             }
         }
 
-        else if (currentSceneIndex >= 33 && currentSceneIndex <= 47)
+        else if (currentSceneIndex >= 37 && currentSceneIndex <= 51)
         {
             switch (currentSceneIndex)
             {
-                case 33:
+                case 37:
                     DataManager.Instance.q1_post = answer;
                     break;
-                case 34:
+                case 38:
                     DataManager.Instance.q2_post = answer;
                     break;
-                case 35:
+                case 39:
                     DataManager.Instance.q3_post = answer;
                     break;
-                case 36:
+                case 40:
                     DataManager.Instance.q4_post = answer;
                     break;
-                case 37:
+                case 41:
                     DataManager.Instance.q5_post = answer;
                     break;
-                case 38:
+                case 42:
                     DataManager.Instance.q6_post = answer;
                     break;
-                case 39:
+                case 43:
                     DataManager.Instance.q7_post = answer;
                     break;
-                case 40:
+                case 44:
                     DataManager.Instance.q8_post = answer;
                     break;
-                case 41:
+                case 45:
                     DataManager.Instance.q9_post = answer;
                     break;
-                case 42:
+                case 46:
                     DataManager.Instance.q10_post = answer;
                     break;
-                case 43:
+                case 47:
                     DataManager.Instance.q11_post = answer;
                     break;
-                case 44:
+                case 48:
                     DataManager.Instance.q12_post = answer;
                     break;
-                case 45:
+                case 49:
                     DataManager.Instance.q13_post = answer;
                     break;
-                case 46:
+                case 50:
                     DataManager.Instance.q14_post = answer;
                     break;
-                case 47:
+                case 51:
                     DataManager.Instance.q15_post = answer;
                     break;
             }
@@ -158,7 +158,7 @@ public class DataProcess : MonoBehaviour
         {
             Debug.LogError("Invalid scene index");
         }
-            if (currentSceneIndex <= 50)
+            if (currentSceneIndex <= 55)
         {
             SceneManager.LoadScene(currentSceneIndex + 1);
         }
