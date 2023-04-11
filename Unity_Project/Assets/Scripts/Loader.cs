@@ -6,7 +6,8 @@ public class Loading : MonoBehaviour
     public void QuitVR()
     {
         UnityEngine.XR.XRSettings.enabled = false;
-        SceneManager.LoadScene("PostAssesment/PostAssesment");
+        Debug.Log("Exiting VR...");
+        SceneManager.LoadScene(36);
     }
 
     public void LoadVR()

@@ -31,7 +31,7 @@ void FixedUpdate ()
 }
 
 public void freezePosition() {
-    Debug.Log(rb + " Freezing Positions");
+    // Debug.Log(rb + " Freezing Positions");
     rb.constraints = RigidbodyConstraints.FreezePosition;
 }
 
