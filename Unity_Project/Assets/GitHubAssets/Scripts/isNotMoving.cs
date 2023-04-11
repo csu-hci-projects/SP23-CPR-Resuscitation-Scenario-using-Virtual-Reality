@@ -31,7 +31,7 @@ void FixedUpdate ()
 }
 
 public void freezeAll() {
-    Debug.Log(rb + " Freezing All");
+    // Debug.Log(rb + " Freezing All");
     rb.constraints = RigidbodyConstraints.FreezeAll;
 }
 
