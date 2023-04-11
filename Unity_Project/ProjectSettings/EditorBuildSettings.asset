@@ -112,7 +112,7 @@ EditorBuildSettings:
     guid: 21fba4fd92e92724ea2fef27cc399291
   - enabled: 0
     path: Assets/Scenes/CPR-Module.unity
-    guid: 682be804922c6e24190783984cd68f5f
+    guid: 59c4518af70e60b468f6ab56d7517db1
   - enabled: 1
     path: Assets/Scenes/VRTraining/CPR-Module-Placeholder.unity
     guid: 327e1cb6e32eac442a8f4e5eaa072dd0
