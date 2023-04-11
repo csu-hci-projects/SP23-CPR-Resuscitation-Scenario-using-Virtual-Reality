@@ -10,7 +10,9 @@ public class PlayButton : MonoBehaviour
 
     public void PlayVideo()
     {
+        videoWasPlayed = true;
         videoPlayer.Play();
+
     }
 
     void Update()
