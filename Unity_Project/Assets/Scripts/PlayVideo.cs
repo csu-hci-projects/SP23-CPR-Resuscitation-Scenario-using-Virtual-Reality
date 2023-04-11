@@ -8,6 +8,13 @@ public class PlayButton : MonoBehaviour
     private bool videoWasPlayed = false;
     public GameObject button;
 
+    public void PlayVideo()
+    {
+        videoWasPlayed = true;
+        videoPlayer.Play();
+
+    }
+
     void Update()
     {
         if (videoPlayer.isPlaying && !videoWasPlayed)
@@ -19,12 +26,4 @@ public class PlayButton : MonoBehaviour
             button.SetActive(true);
         }
     }
-
-    public void PlayVideo()
-    {
-        videoWasPlayed = true;
-        videoPlayer.Play();
-
-    }
-
 }
