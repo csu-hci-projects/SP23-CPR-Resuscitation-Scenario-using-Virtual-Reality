@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028377, g: 0.22571409, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6242,6 +6242,10 @@ PrefabInstance:
       value: 2427
       objectReference: {fileID: 0}
     - target: {fileID: 3357105135896008198, guid: 3251bcfd511663a47bbeae09bfd47164, type: 3}
+      propertyPath: m_text
+      value: S is for Shout. If there is no response, you need to shout for help.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357105135896008198, guid: 3251bcfd511663a47bbeae09bfd47164, type: 3}
       propertyPath: m_fontSize
       value: 24
       objectReference: {fileID: 0}
@@ -7092,6 +7096,19 @@ PrefabInstance:
       propertyPath: m_Padding.m_Bottom
       value: -57
       objectReference: {fileID: 0}
+    - target: {fileID: 7654186380801727366, guid: aa37760bb6d64e740826a493992096fa, type: 3}
+      propertyPath: m_text
+      value: "C is for circulation. Circulation means the flow of blood around the
+        body and when the heart stops pumping we need to take over this role by pushing
+        down hard and fast on the chest.\n\n   \u2022 Start by placing the heel of
+        one hand at the center of the person's chest and interlock your fingers,
+        with your arms straightneed, press down hard and fast letting the chest come
+        back up fully each time.  \n\n   \u2022 Fast means around 2 times every second
+        and hard means the chest needs to go down by about 5 cm. \n\n   \u2022 You
+        need to push hard to be effective. You can also give two rescue breaths if
+        you have been trained. \n\n   \u2022 Make sure to do resuce breaths after
+        30 chest compressions as this helps provide oxygen."
+      objectReference: {fileID: 0}
     - target: {fileID: 7775008681563982643, guid: aa37760bb6d64e740826a493992096fa, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7223,6 +7240,19 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 362396754}
     m_Modifications:
+    - target: {fileID: 624550320427113458, guid: 6ea566a5d4c235b4a8c104d9e73efb65, type: 3}
+      propertyPath: m_text
+      value: "You have arrived to the end of the simulation:\n\nRemember! \nWe learned
+        the DRSABC in this CPR simulation, to recap:\n\nD is for Danger\nR is for
+        Response\nA is for Airway\nB is for Breathing\nC is for CPR\n\nIt is important
+        to place the hands at the center of the chest with your fingers interlocked
+        with your arms straight and press down hard and fast, making sure the chest
+        rises fully. Attempt 2 rescue breaths for every 30 chest compressions.\n\nMake
+        sure to always call for help before you begin any life saving measure and
+        that you are comfortable performing CPR.\n\nWhen you are ready, press the
+        exit button and take off your headset and get ready for the next step of
+        instructions."
+      objectReference: {fileID: 0}
     - target: {fileID: 1155491514154687715, guid: 6ea566a5d4c235b4a8c104d9e73efb65, type: 3}
       propertyPath: m_Camera
       value: 
@@ -7428,15 +7458,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5027976023842612886, guid: 6ea566a5d4c235b4a8c104d9e73efb65, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4016878737273148072}
-    - targetCorrespondingSourceObject: {fileID: 6077647746518182197, guid: 6ea566a5d4c235b4a8c104d9e73efb65, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 348526541456151873, guid: 6ea566a5d4c235b4a8c104d9e73efb65, type: 3}
       insertIndex: 1
       addedObject: {fileID: 4016878737273148076}
-    - targetCorrespondingSourceObject: {fileID: 414048699595080800, guid: 6ea566a5d4c235b4a8c104d9e73efb65, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 6ea566a5d4c235b4a8c104d9e73efb65, type: 3}
 --- !u!4 &4016878737273148070 stripped
 Transform:
@@ -7992,6 +8016,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1684318913}
     m_Modifications:
+    - target: {fileID: 66581768793574116, guid: 8590d7b05a4f51f46aee61f4b727c9a8, type: 3}
+      propertyPath: m_text
+      value: "B is for breathing. Look, listen and feel for signs of normal breathing.
+        LOOK for normal chest movments. \n\nLISTEN for normal breathing sounds, and
+        try to FEEL their breath against your face. Do this for no more than 10 seconds."
+      objectReference: {fileID: 0}
     - target: {fileID: 66581768793574116, guid: 8590d7b05a4f51f46aee61f4b727c9a8, type: 3}
       propertyPath: m_fontSize
       value: 24
@@ -10428,6 +10458,18 @@ PrefabInstance:
     - target: {fileID: 4483606388531021991, guid: b178216dce2a39a42aa120738ac0f64b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.417
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855866081350809345, guid: b178216dce2a39a42aa120738ac0f64b, type: 3}
+      propertyPath: m_text
+      value: "\nEach step in the CPR VR simulator has instructions to guide you through
+        the simulation. These instructions are designed to help you understand what
+        you need to do to perform CPR correctly. \n\nHotspot will apear as you progress
+        through the simulation, use them to travel quickly to each step.\n\nAdditonal
+        instructions will provide you with more information for each step  and will
+        guide you through the process to help you improve your technique. \n\nAt
+        Completion:\nRestart: After you have completed the scenario, you can choose
+        to restart to improve your performance\n\nExit Simulation: When you are finished
+        practicing, exit the simulator by following the on-screen instructions."
       objectReference: {fileID: 0}
     - target: {fileID: 4855866081350809345, guid: b178216dce2a39a42aa120738ac0f64b, type: 3}
       propertyPath: m_fontSize
