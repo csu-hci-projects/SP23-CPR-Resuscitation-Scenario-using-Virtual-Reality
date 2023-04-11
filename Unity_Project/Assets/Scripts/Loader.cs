@@ -14,5 +14,8 @@ public class Loading : MonoBehaviour
     {
         SceneManager.LoadScene("CPR-Module");
     }
-
+    public void BacktoStart()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
