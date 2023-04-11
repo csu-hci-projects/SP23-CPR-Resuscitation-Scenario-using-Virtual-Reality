@@ -7458,9 +7458,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5027976023842612886, guid: 6ea566a5d4c235b4a8c104d9e73efb65, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4016878737273148072}
+    - targetCorrespondingSourceObject: {fileID: 6077647746518182197, guid: 6ea566a5d4c235b4a8c104d9e73efb65, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
     - targetCorrespondingSourceObject: {fileID: 348526541456151873, guid: 6ea566a5d4c235b4a8c104d9e73efb65, type: 3}
       insertIndex: 1
       addedObject: {fileID: 4016878737273148076}
+    - targetCorrespondingSourceObject: {fileID: 414048699595080800, guid: 6ea566a5d4c235b4a8c104d9e73efb65, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 6ea566a5d4c235b4a8c104d9e73efb65, type: 3}
 --- !u!4 &4016878737273148070 stripped
 Transform:
@@ -10262,6 +10268,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2418962458104028040, guid: 6762f4986b2322d4aade36c7530831b8, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 0367e462afe9641f7add32c810c41be0, type: 3}
     - target: {fileID: 2492947082478945365, guid: 6762f4986b2322d4aade36c7530831b8, type: 3}
       propertyPath: m_IsActive
       value: 0
