@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Scripts;
 
@@ -43,5 +44,10 @@ public class SceneSwitcher : MonoBehaviour
     public void Converge()
     {
         SceneManager.LoadScene(36);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
