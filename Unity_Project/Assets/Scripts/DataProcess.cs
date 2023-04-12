@@ -17,18 +17,18 @@ public class DataProcess : MonoBehaviour
     public void Next()
     {
         string answer = currentQuestionToggleGroup.GetFirstActiveToggle().name;
-
-        if (currentSceneIndex == 0)
-        {
-            DataManager.Instance.id = answer;
-            participantGroupNumber = answer;
-        }
-        if (currentSceneIndex >= 3 && currentSceneIndex <= 7)
+    
+        if (currentSceneIndex == 0 || (currentSceneIndex >= 3 && currentSceneIndex <= 7))
         {
             switch (currentSceneIndex)
             {
+                case 0:
+                    Debug.Log("Log id: " + answer);
+                    DataManager.Instance.id = answer;
+                    participantGroupNumber = answer;
+                    break;
                 case 3:
-                    DataManager.Instance.age = answer;
+                    DataManager.Instance.age = answer; 
                     break;
                 case 4:
                     DataManager.Instance.gender = answer;
