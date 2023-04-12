@@ -6,6 +6,7 @@ public class DataManager : MonoBehaviour
 {
     public static DataManager Instance;
 
+    public string id;
     public string age;
     public string gender;
     public string education;
