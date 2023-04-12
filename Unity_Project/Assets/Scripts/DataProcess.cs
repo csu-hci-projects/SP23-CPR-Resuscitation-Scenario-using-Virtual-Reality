@@ -167,7 +167,7 @@ public class DataProcess : MonoBehaviour
         {
             Debug.LogError("Invalid scene index");
         }
-            if (currentSceneIndex <= 55)
+            if (currentSceneIndex <= 54)
         {
             SceneManager.LoadScene(currentSceneIndex + 1);
         }
