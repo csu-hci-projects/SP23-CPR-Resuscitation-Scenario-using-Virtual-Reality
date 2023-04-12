@@ -4,16 +4,25 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
+namespace Scripts
+{
 public class DataProcess : MonoBehaviour
 {
     public ToggleGroup currentQuestionToggleGroup;
     public int currentSceneIndex;
+    public static string participantGroupNumber;
 
     private string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeWdPtTo1KhjPYkowJ2hlh_TgT1s_UXyg_tfIl89WdwCd0H-A/formResponse";
 
     public void Next()
     {
         string answer = currentQuestionToggleGroup.GetFirstActiveToggle().name;
+
+        if (currentSceneIndex == 0)
+        {
+            DataManager.Instance.id = answer;
+            participantGroupNumber = answer;
+        }
         if (currentSceneIndex >= 3 && currentSceneIndex <= 7)
         {
             switch (currentSceneIndex)
@@ -166,7 +175,7 @@ public class DataProcess : MonoBehaviour
 
     public void Submit()
     {
-        StartCoroutine(Post(DataManager.Instance.age, DataManager.Instance.gender, DataManager.Instance.education, DataManager.Instance.VRScale, DataManager.Instance.CPRScale, DataManager.Instance.q1_pre, 
+        StartCoroutine(Post(DataManager.Instance.id, DataManager.Instance.age, DataManager.Instance.gender, DataManager.Instance.education, DataManager.Instance.VRScale, DataManager.Instance.CPRScale, DataManager.Instance.q1_pre, 
             DataManager.Instance.q2_pre, DataManager.Instance.q3_pre, DataManager.Instance.q4_pre, DataManager.Instance.q5_pre, DataManager.Instance.q6_pre, 
             DataManager.Instance.q7_pre, DataManager.Instance.q8_pre, DataManager.Instance.q9_pre, DataManager.Instance.q10_pre, DataManager.Instance.q11_pre, 
             DataManager.Instance.q12_pre, DataManager.Instance.q13_pre, DataManager.Instance.q14_pre, DataManager.Instance.q15_pre,
@@ -179,7 +188,7 @@ public class DataProcess : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
-    IEnumerator Post(string Age, string Gender, string Education, string vrscale, string cprscale,
+    IEnumerator Post(string ID, string Age, string Gender, string Education, string vrscale, string cprscale,
         string Q1Pre, string Q2Pre, string Q3Pre, string Q4Pre, string Q5Pre, string Q6Pre, string Q7Pre,
         string Q8Pre, string Q9Pre, string Q10Pre, string Q11Pre, string Q12Pre, string Q13Pre, string Q14Pre, string Q15Pre
         ,string postcpr, string postexp, string postfeed, string Q1Post, string Q2Post, string Q3Post, string Q4Post, string Q5Post, string Q6Post, string Q7Post,
@@ -188,6 +197,7 @@ public class DataProcess : MonoBehaviour
         Debug.Log("Post started");
         WWWForm form = new WWWForm();
 
+        form.AddField("entry.1185679038", ID);
         form.AddField("entry.156737009", Age);
         form.AddField("entry.195872643", Gender);
         form.AddField("entry.1034252165", Education);
@@ -285,5 +295,5 @@ public class DataProcess : MonoBehaviour
         }
     }
 }
-
+}
 

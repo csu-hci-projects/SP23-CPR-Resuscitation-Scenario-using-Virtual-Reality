@@ -1280,7 +1280,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 862762869}
         m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
-        m_MethodName: Next
+        m_MethodName: Converge
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
