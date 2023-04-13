@@ -10,13 +10,13 @@
 
 ****How to Run the Experiment**** 
 --------------------------------------------
-1a. From Terminal:
-  - Navigate to the CPR Experiment directory
-  - Start the experiment with the command: ./CPR_Project.exe
+  1a. From Terminal:
+    - Navigate to the CPR Experiment directory
+    - Start the experiment with the command: ./CPR_Project.exe
 
-1b. From Desktop:
-  - Open the CPR Experiment folder
-  - double click on the CPR_Project.exe file
+  1b. From Desktop:
+    - Open the CPR Experiment folder
+    - double click on the CPR_Project.exe file
 
 2. Select type of experiment
 3. Conduct experiment and Submit
