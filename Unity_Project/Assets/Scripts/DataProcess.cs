@@ -23,7 +23,6 @@ public class DataProcess : MonoBehaviour
             switch (currentSceneIndex)
             {
                 case 0:
-                    Debug.Log("Log id: " + answer);
                     DataManager.Instance.id = answer;
                     participantGroupNumber = answer;
                     break;
