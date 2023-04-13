@@ -163,7 +163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.5, y: -284}
+  m_AnchoredPosition: {x: -6.5, y: -296}
   m_SizeDelta: {x: 220, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &159598955
@@ -573,15 +573,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2133137030}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -97.1, y: 268}
-  m_SizeDelta: {x: 521.6, y: 54.9}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 61, y: -236.6}
+  m_SizeDelta: {x: 600, y: 52.114685}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1226584660
 MonoBehaviour:
@@ -605,8 +605,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Thank you for your participation
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 11c5758dea053474f88e1f16f0d7ff37, type: 2}
-  m_sharedMaterial: {fileID: 7032093815205813286, guid: 11c5758dea053474f88e1f16f0d7ff37, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cebc8a1fcb33b624b8a8249875ac7361, type: 2}
+  m_sharedMaterial: {fileID: -5839354330806206608, guid: cebc8a1fcb33b624b8a8249875ac7361, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -630,15 +630,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.05
-  m_fontSizeBase: 42
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 8
-  m_VerticalAlignment: 512
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -666,7 +666,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -207.54492, w: -8.458801}
+  m_margin: {x: 0, y: 0, z: 112.69714, w: -8.458801}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

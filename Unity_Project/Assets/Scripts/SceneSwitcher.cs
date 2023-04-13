@@ -27,6 +27,11 @@ public class SceneSwitcher : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void RestartAll()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 7);
+    }
+
     public void Divert()
     {
         string pid = DataProcess.participantGroupNumber;

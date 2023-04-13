@@ -639,8 +639,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You may use the next and back buttons to complete the assesment. Please
-    select one answer for each question.
+  m_text: "You may use the next and back buttons to complete the assesment. \n\nPlease
+    select one answer for each question."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 11c5758dea053474f88e1f16f0d7ff37, type: 2}
   m_sharedMaterial: {fileID: 7032093815205813286, guid: 11c5758dea053474f88e1f16f0d7ff37, type: 2}
