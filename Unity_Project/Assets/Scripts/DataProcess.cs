@@ -11,6 +11,8 @@ public class DataProcess : MonoBehaviour
     public ToggleGroup currentQuestionToggleGroup;
     public int currentSceneIndex;
     public static string participantGroupNumber;
+    public static double num_correct_pre = 0.0;
+    public static double num_correct_post = 0.0;
 
     private string URL = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeWdPtTo1KhjPYkowJ2hlh_TgT1s_UXyg_tfIl89WdwCd0H-A/formResponse";
 
@@ -49,48 +51,78 @@ public class DataProcess : MonoBehaviour
             {
                 case 9:
                     DataManager.Instance.q1_pre = answer;
+                    if (answer == "C")
+                        num_correct_pre = num_correct_pre + 1.0;
                     break;
                 case 10:
                     DataManager.Instance.q2_pre = answer;
+                    if (answer == "C")
+                        num_correct_pre = num_correct_pre + 1.0;
                     break;
                 case 11:
                     DataManager.Instance.q3_pre = answer;
+                    if (answer == "B")
+                        num_correct_pre = num_correct_pre + 1.0;
                     break;
                 case 12:
                     DataManager.Instance.q4_pre = answer;
+                    if (answer == "B")
+                        num_correct_pre = num_correct_pre + 1.0;
                     break;
                 case 13:
                     DataManager.Instance.q5_pre = answer;
+                    if (answer == "C")
+                        num_correct_pre = num_correct_pre + 1.0;
                     break;
                 case 14:
                     DataManager.Instance.q6_pre = answer;
+                    if (answer == "A")
+                        num_correct_pre = num_correct_pre + 1.0;
                     break;
                 case 15:
                     DataManager.Instance.q7_pre = answer;
+                    if (answer == "A")
+                        num_correct_pre = num_correct_pre + 1.0;
                     break;
                 case 16:
                     DataManager.Instance.q8_pre = answer;
+                    if (answer == "A")
+                        num_correct_pre = num_correct_pre + 1.0;
                     break;
                 case 17:
                     DataManager.Instance.q9_pre = answer;
+                    if (answer == "T")
+                        num_correct_pre = num_correct_pre + 1.0;
                     break;
                 case 18:
                     DataManager.Instance.q10_pre = answer;
+                    if (answer == "B")
+                        num_correct_pre = num_correct_pre + 1.0;
                     break;
                 case 19:
                     DataManager.Instance.q11_pre = answer;
+                    if (answer == "A")
+                        num_correct_pre = num_correct_pre + 1.0;
                     break;
                 case 20:
                     DataManager.Instance.q12_pre = answer;
+                    if (answer == "C")
+                        num_correct_pre = num_correct_pre + 1.0;
                     break;
                 case 21:
                     DataManager.Instance.q13_pre = answer;
+                    if (answer == "C")
+                        num_correct_pre = num_correct_pre + 1.0;
                     break;
                 case 22:
                     DataManager.Instance.q14_pre = answer;
+                    if (answer == "F")
+                        num_correct_pre = num_correct_pre + 1.0;
                     break;
                 case 23:
                     DataManager.Instance.q15_pre = answer;
+                    if (answer == "D")
+                        num_correct_pre = num_correct_pre + 1.0;
                     break;
             }
         }
@@ -116,48 +148,78 @@ public class DataProcess : MonoBehaviour
             {
                 case 37:
                     DataManager.Instance.q1_post = answer;
+                    if (answer == "C")
+                        num_correct_post = num_correct_post + 1.0;
                     break;
                 case 38:
                     DataManager.Instance.q2_post = answer;
+                    if (answer == "C")
+                        num_correct_post = num_correct_post + 1.0;
                     break;
                 case 39:
                     DataManager.Instance.q3_post = answer;
+                    if (answer == "B")
+                        num_correct_post = num_correct_post + 1.0;
                     break;
                 case 40:
                     DataManager.Instance.q4_post = answer;
+                    if (answer == "B")
+                        num_correct_post = num_correct_post + 1.0;
                     break;
                 case 41:
                     DataManager.Instance.q5_post = answer;
+                    if (answer == "C")
+                        num_correct_post = num_correct_post + 1.0;
                     break;
                 case 42:
                     DataManager.Instance.q6_post = answer;
+                    if (answer == "A")
+                        num_correct_post = num_correct_post + 1.0;
                     break;
                 case 43:
                     DataManager.Instance.q7_post = answer;
+                    if (answer == "A")
+                        num_correct_post = num_correct_post + 1.0;
                     break;
                 case 44:
                     DataManager.Instance.q8_post = answer;
+                    if (answer == "A")
+                        num_correct_post = num_correct_post + 1.0;
                     break;
                 case 45:
                     DataManager.Instance.q9_post = answer;
+                    if (answer == "T")
+                        num_correct_post = num_correct_post + 1.0;
                     break;
                 case 46:
                     DataManager.Instance.q10_post = answer;
+                    if (answer == "B")
+                        num_correct_post = num_correct_post + 1.0;
                     break;
                 case 47:
                     DataManager.Instance.q11_post = answer;
+                    if (answer == "A")
+                        num_correct_post = num_correct_post + 1.0;
                     break;
                 case 48:
                     DataManager.Instance.q12_post = answer;
+                    if (answer == "C")
+                        num_correct_post = num_correct_post + 1.0;
                     break;
                 case 49:
                     DataManager.Instance.q13_post = answer;
+                    if (answer == "C")
+                        num_correct_post = num_correct_post + 1.0;
                     break;
                 case 50:
                     DataManager.Instance.q14_post = answer;
+                    if (answer == "F")
+                        num_correct_post = num_correct_post + 1.0;
                     break;
                 case 51:
                     DataManager.Instance.q15_post = answer;
+                    if (answer == "D")
+                        num_correct_post = num_correct_post + 1.0;
                     break;
             }
         }
@@ -295,4 +357,3 @@ public class DataProcess : MonoBehaviour
     }
 }
 }
-

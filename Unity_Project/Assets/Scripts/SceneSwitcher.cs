@@ -11,7 +11,6 @@ public class SceneSwitcher : MonoBehaviour
     private int currentSceneIndex; 
     private string pid;
 
-
    public void Next()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
