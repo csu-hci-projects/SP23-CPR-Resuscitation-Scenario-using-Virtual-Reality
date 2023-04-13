@@ -13,6 +13,7 @@
 1a. From Terminal:
   - Navigate to the CPR Experiment directory
   - Start the experiment with the command: ./CPR_Project.exe
+
 1b. From Desktop:
   - Open the CPR Experiment folder
   - double click on the CPR_Project.exe file
