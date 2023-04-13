@@ -1,7 +1,6 @@
 ****How to Download the Experiment**** 
 --------------------------------------------
 
-Instructions: 
 1. Download 'CPR Experiment.tar' at: https://drive.google.com/drive/folders/1H4b-99QHORDKV2C-TrZMy90pC9wL2ac5?usp=sharing
 2. On Windows:
 3. Navigate to the .tar file in your terminal
