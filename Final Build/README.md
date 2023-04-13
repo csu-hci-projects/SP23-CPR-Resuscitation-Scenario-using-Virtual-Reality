@@ -2,7 +2,7 @@
 --------------------------------------------
 
 Instructions: 
-1. Download at: https://drive.google.com/drive/folders/1H4b-99QHORDKV2C-TrZMy90pC9wL2ac5?usp=sharing   
+1. Download 'CPR Experiment.tar' at: https://drive.google.com/drive/folders/1H4b-99QHORDKV2C-TrZMy90pC9wL2ac5?usp=sharing   
 1. Extract to location of choice  
 1. Run CPR_Project.exe  
 1. Select type of experiment  
