@@ -482,8 +482,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 61, y: -224.4}
-  m_SizeDelta: {x: 411.4695, y: 52.114685}
+  m_AnchoredPosition: {x: 61, y: -408}
+  m_SizeDelta: {x: 494.4, y: 52.114685}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1216218004
 MonoBehaviour:
@@ -505,11 +505,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Now let's test your CPR knowledge. Please select one answer for each question.
-    You may use the forward and back buttons to complete the assesment.
+  m_text: "Now let's test your CPR knowledge. \n\nPlease select one answer for each
+    question. \nYou may use the next and back buttons to complete the assesment."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 11c5758dea053474f88e1f16f0d7ff37, type: 2}
+  m_sharedMaterial: {fileID: 7032093815205813286, guid: 11c5758dea053474f88e1f16f0d7ff37, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -550,7 +550,7 @@ MonoBehaviour:
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
+  m_wordWrappingRatios: 0
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
@@ -618,8 +618,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 61, y: -100}
-  m_SizeDelta: {x: 700, y: 52.114685}
+  m_AnchoredPosition: {x: 61, y: -283}
+  m_SizeDelta: {x: 550, y: 52.114685}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1226584660
 MonoBehaviour:
@@ -643,8 +643,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Congratulations for completing the training!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: daeefe42ed2c82c428fabe8a03bfa066, type: 2}
+  m_sharedMaterial: {fileID: -9221056233183343877, guid: daeefe42ed2c82c428fabe8a03bfa066, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -668,13 +668,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 46
+  m_fontSizeBase: 46
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -684,7 +684,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -776,7 +776,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next
+  m_text: Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
