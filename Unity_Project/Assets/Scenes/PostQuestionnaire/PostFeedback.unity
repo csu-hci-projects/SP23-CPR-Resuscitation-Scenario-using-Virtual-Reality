@@ -1365,7 +1365,7 @@ GameObject:
   - component: {fileID: 435144269}
   - component: {fileID: 435144270}
   m_Layer: 5
-  m_Name: Looks Good
+  m_Name: Good
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1440,7 +1440,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &446755205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2373,7 +2373,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'On a scale of 1-10, how smooth was the process of this experiment? '
+  m_text: 'On a scale of 1-10, how easy was the process of this experiment? '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cebc8a1fcb33b624b8a8249875ac7361, type: 2}
   m_sharedMaterial: {fileID: -5839354330806206608, guid: cebc8a1fcb33b624b8a8249875ac7361, type: 2}
@@ -3076,7 +3076,7 @@ GameObject:
   - component: {fileID: 1105940129}
   - component: {fileID: 1105940130}
   m_Layer: 5
-  m_Name: Toggle Menu (1)
+  m_Name: Toggle Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3362,7 +3362,7 @@ GameObject:
   - component: {fileID: 1112965888}
   - component: {fileID: 1112965889}
   m_Layer: 5
-  m_Name: 'No Recommendations '
+  m_Name: Bad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3701,7 +3701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bfe115a998d3e84698469bc8f4c48cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentQuestionToggleGroup: {fileID: 484323004}
+  currentQuestionToggleGroup: {fileID: 1105940130}
   currentSceneIndex: 54
 --- !u!114 &1213061859
 MonoBehaviour:
@@ -5277,7 +5277,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Bad
+  m_Text: Good
 --- !u!222 &1960016601
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5357,7 +5357,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'No Recommendations '
+  m_Text: Bad
 --- !u!222 &1988430448
 CanvasRenderer:
   m_ObjectHideFlags: 0
