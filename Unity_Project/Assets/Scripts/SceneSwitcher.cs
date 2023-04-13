@@ -40,6 +40,10 @@ public class SceneSwitcher : MonoBehaviour
         if (pid == "0") {
             Debug.Log("The value of pid is 0");
             SceneManager.LoadScene(33);
+        }
+        else if (pid == "Fake") {
+            Debug.Log("The value of pid is Fake");
+            SceneManager.LoadScene(36);
         } else {
             Debug.Log("The value of pid is NOT 0");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
