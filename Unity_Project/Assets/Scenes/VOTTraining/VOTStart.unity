@@ -627,11 +627,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Your training is about to begin.
+  m_text: 'Video training is about to begin.
 
 
-    Please get comfortable in your
-    chair while you watch a series of short videos.'
+    Please get comfortable while you
+    watch a series of short videos.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 11c5758dea053474f88e1f16f0d7ff37, type: 2}
   m_sharedMaterial: {fileID: 7032093815205813286, guid: 11c5758dea053474f88e1f16f0d7ff37, type: 2}
