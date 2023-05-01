@@ -5,7 +5,7 @@ Every Friday at 12pm MST via Discord voice channel
 # Checkpoint 1
 
 ### Project Progress Video:
-Unity Non-VR Demo: https://www.youtube.com/watch?v=niQPqMDvrWY
+Unity Non-VR Demo: https://www.youtube.com/watch?v=niQPqMDvrWY <br>
 Unity VR Demo: https://youtu.be/j7v3ahip-7o
 
 ### Works Completed So Far:
@@ -16,7 +16,7 @@ Unity VR Demo: https://youtu.be/j7v3ahip-7o
 | Hunter | 2D introduction. Added C# script to send data question data to google form/google sheets | 
 | Donnie | Designed experiment. Compiled and created questionnaires and assessments questions |
 
-### Work to be Compelted:
+### Work to be Completed:
 | Member | Pending List |
 | - | - |
 | Matt | Finish issues list for the VR side of the experiment. Most issues are centered around interaction of the victim and the 5 steps of CPR |
@@ -26,10 +26,10 @@ Unity VR Demo: https://youtu.be/j7v3ahip-7o
 
 # Checkpoint 2:
 ### Project Progress Video:
-Project Prototype Demo: https://www.youtube.com/watch?v=E7ONGuT5zOo
+Project Prototype Demo: https://www.youtube.com/watch?v=E7ONGuT5zOo <br>
 Overleaf Paper: https://www.overleaf.com/project/641752a85ed2a7ae6d9eef90
 
-### Works Completed So Far:
+### Work Completed So Far:
 | Member |   Position    | Percent Contribution | Contribution List |
 | --- | --- | --- | --- |
 | Matt   | 3D Scene Team |         29%          | VR environment and victim staged, basic gestures and interaction helpers in place, task-to-task transitions, 2D | | formatting |
