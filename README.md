@@ -54,12 +54,14 @@ Payday
 </details>
 
 ## Installation Instructions
+When you run the code, the very first screen is displayed below. The researcher manually chose the group assignment on a rotating schedule.  The "Test Only" option was provided for code testing and debugging purposes. Once the researcher selected one of the options, it would go to the next slide and authority was passed on to the participant starting on the 2nd screen.
 https://github.com/csu-hci-projects/SP23-CPR-Resuscitation-Scenario-using-Virtual-Reality/tree/main/Final%20Build#readme
 
 ## Usage Instructions
 <img src="https://user-images.githubusercontent.com/101760285/235547656-4545c51c-d673-4e9c-be55-4a9c90d1f2a1.jpg" width="400">
 
 ## In-App Screenshot Examples
+First Screen the participant saw:
 <img src="https://user-images.githubusercontent.com/101760285/235547679-5e1108e6-b0a3-42e1-a7ba-faca46940b1a.jpg" width="400">
 <img src="https://user-images.githubusercontent.com/101760285/235547689-f75ba7bb-306d-49ef-906c-581a7354ee5a.jpg" width="400">
 <img src="https://user-images.githubusercontent.com/101760285/235547750-0226b21d-f0f3-44ed-9d71-29850812f764.jpg" width="400">
