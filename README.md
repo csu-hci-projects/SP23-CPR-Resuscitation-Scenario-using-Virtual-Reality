@@ -59,15 +59,15 @@ Payday
 
 ## In-App Screenshot Examples
 <img src="https://user-images.githubusercontent.com/101760285/235547656-4545c51c-d673-4e9c-be55-4a9c90d1f2a1.jpg" width="500">
-![SB2](https://user-images.githubusercontent.com/101760285/235547679-5e1108e6-b0a3-42e1-a7ba-faca46940b1a.jpg | width=150)
-![SB3](https://user-images.githubusercontent.com/101760285/235547689-f75ba7bb-306d-49ef-906c-581a7354ee5a.jpg | width=200)
-![SB4](https://user-images.githubusercontent.com/101760285/235547750-0226b21d-f0f3-44ed-9d71-29850812f764.jpg)
-![SB5](https://user-images.githubusercontent.com/101760285/235547758-abad8017-f36c-4da1-b3a7-5e70c58684e9.jpg)
-![VR1](https://user-images.githubusercontent.com/101760285/235547819-bbb2f9fc-8daa-4f1d-9732-f6326c3f2313.jpeg)
-![VR2](https://user-images.githubusercontent.com/101760285/235547825-a85a3f0d-d059-4fbc-a09f-08bdbbfe2250.jpeg)
-![VR3](https://user-images.githubusercontent.com/101760285/235547833-2bb1e72c-0548-4954-b82f-ffc79bb26c26.jpeg)
-![VR4](https://user-images.githubusercontent.com/101760285/235547839-dbf44f06-9fd9-47f1-9ef0-0f8ccc9a993e.jpeg)
-![SB6](https://user-images.githubusercontent.com/101760285/235547877-4868bce4-dae5-4fe7-8890-b7c0b7c1f4a4.jpg)
+<img src="https://user-images.githubusercontent.com/101760285/235547679-5e1108e6-b0a3-42e1-a7ba-faca46940b1a.jpg" width="500">
+<img src="https://user-images.githubusercontent.com/101760285/235547689-f75ba7bb-306d-49ef-906c-581a7354ee5a.jpg" width="500">
+<img src="https://user-images.githubusercontent.com/101760285/235547750-0226b21d-f0f3-44ed-9d71-29850812f764.jpg" width="500">
+<img src="https://user-images.githubusercontent.com/101760285/235547758-abad8017-f36c-4da1-b3a7-5e70c58684e9.jpg" width="500">
+<img src="https://user-images.githubusercontent.com/101760285/235547819-bbb2f9fc-8daa-4f1d-9732-f6326c3f2313.jpeg" width="500">
+<img src="https://user-images.githubusercontent.com/101760285/235547825-a85a3f0d-d059-4fbc-a09f-08bdbbfe2250.jpeg" width="500">
+<img src="https://user-images.githubusercontent.com/101760285/235547833-2bb1e72c-0548-4954-b82f-ffc79bb26c26.jpeg" width="500">
+<img src="https://user-images.githubusercontent.com/101760285/235547839-dbf44f06-9fd9-47f1-9ef0-0f8ccc9a993e.jpeg" width="500">
+<img src="https://user-images.githubusercontent.com/101760285/235547877-4868bce4-dae5-4fe7-8890-b7c0b7c1f4a4.jpg" width="500">
 
 ## Acknowledgement
 CSU Computer Science Department
