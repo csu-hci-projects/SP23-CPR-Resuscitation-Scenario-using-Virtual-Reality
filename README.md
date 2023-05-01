@@ -1,7 +1,7 @@
 # SP23-CPR-Resuscitation-Scenario-using-Virtual-Reality
 
 ## Overview
-When learning CPR, we want to see if the average person can benefit more from video observation training (VOT) or virtual reality (VR) training. Each participant provided feedback on meta data as well as subjective measures of their CPR comfort. After taking a pre-training assessment for a base line, everybody will be directed to either VOT or VR training. Thereafter, each participant is given the assessment to measure their improvement and once again asked about the new CPR comfort level. The independent variable, training method, was measured against both of our two dependent variables, CPR Assessment and CPR Comfort.
+When learning CPR we want to see if the average person can benefit more from video observation training (VOT) or virtual reality (VR) training. Each participant provided feedback on meta data as well as subjective measures of their CPR comfort. After taking a pre-training assessment for a base line, everybody will be directed to either VOT or VR training. Thereafter, each participant is given the assessment again to measure their improvement and once again asked about the new CPR comfort level. The independent variable, training method, was measured against both of our two dependent variables, CPR Assessment and CPR Comfort.
 
 ## Timeline
 <sub>_click on checkpoint for details_</sub>
