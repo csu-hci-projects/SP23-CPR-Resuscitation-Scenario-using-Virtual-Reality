@@ -58,7 +58,7 @@ Payday
 ## Usage Instructions
 
 ## In-App Screenshot Examples
-<img src="https://user-images.githubusercontent.com/101760285/235547656-4545c51c-d673-4e9c-be55-4a9c90d1f2a1.jpg" width="100">
+<img src="https://user-images.githubusercontent.com/101760285/235547656-4545c51c-d673-4e9c-be55-4a9c90d1f2a1.jpg" width="500">
 ![SB2](https://user-images.githubusercontent.com/101760285/235547679-5e1108e6-b0a3-42e1-a7ba-faca46940b1a.jpg | width=150)
 ![SB3](https://user-images.githubusercontent.com/101760285/235547689-f75ba7bb-306d-49ef-906c-581a7354ee5a.jpg | width=200)
 ![SB4](https://user-images.githubusercontent.com/101760285/235547750-0226b21d-f0f3-44ed-9d71-29850812f764.jpg)
