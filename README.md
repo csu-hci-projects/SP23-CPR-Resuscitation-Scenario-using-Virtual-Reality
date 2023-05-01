@@ -71,5 +71,8 @@ https://github.com/csu-hci-projects/SP23-CPR-Resuscitation-Scenario-using-Virtua
 <img src="https://user-images.githubusercontent.com/101760285/235547877-4868bce4-dae5-4fe7-8890-b7c0b7c1f4a4.jpg" width="400">
 
 ## Acknowledgement
-CSU Computer Science Department
+This work is supported by Colorado State University, Fort Collins. We would like to acknowledge Francisco R. Ortega,
+Ph.D, Jacina Li, Richi Rodriquez, and our friends and family. We would also like to express our gratitude to the Computer
+Science department for their support in providing us with the necessary virtual reality equipment, including the Meta
+Quest 2 headset, to conduct our research.
 
