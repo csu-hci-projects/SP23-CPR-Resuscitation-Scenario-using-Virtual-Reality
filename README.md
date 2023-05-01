@@ -54,6 +54,7 @@ Payday
 </details>
 
 ## Installation Instructions
+https://github.com/csu-hci-projects/SP23-CPR-Resuscitation-Scenario-using-Virtual-Reality/tree/main/Final%20Build#readme
 
 ## Usage Instructions
 <img src="https://user-images.githubusercontent.com/101760285/235547656-4545c51c-d673-4e9c-be55-4a9c90d1f2a1.jpg" width="400">
