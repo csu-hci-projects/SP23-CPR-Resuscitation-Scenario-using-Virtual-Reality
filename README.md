@@ -19,29 +19,29 @@ All relevant code to welcome our particpants to the study and provide all necess
 
 <details><summary>Checkpoint 3: 03/17/2023</summary>
   
-***Education segment:***
-All education should be completed for CPR purpose, AED purpose, crisis recognition, preliminary response, CPR process, AED process, and recovery.
+***2D Scenes:***
+All 2D scenes finalized. Questionnaire for meta data and info gathering. Integrate answers into shared online document for data storage.
 </details>
 
 <details><summary>Checkpoint 4: 04/01/2023</summary>
   
-***CPR Administration Module Part 1:***
-Create the scenario compelete with virtual environment setup and initial briefing.
+***VOT/VR Training Complete:***
+Create both training modules and ready for integration.
 </details>
 
-<details><summary>Checkpoint 5: 04/14/2023</summary>
+<details><summary>Checkpoint 5: 04/10/2023</summary>
   
-***CPR Administration Module Part 2:***
-Add interaction details such as victim creation, resource manipulation, audio output, and all relevant measures (timer, step-by-step Q&A analysis, etc.).
+***Working App:***
+All coding for the app has been completed. Fully functional app and ready to begin experiments.
 </details>
 
-<details><summary>Checkpoint 6: 04/21/2023</summary>
+<details><summary>Checkpoint 6: 04/17/2023</summary>
   
-***Post-Module Questionnaire:***
-Create post-module questionnaire to acquire participant "overall experience", "new CPR comfort level", and "recommendations for improvement".
+***Experiment Completion:***
+All participants acquired and completed the experiment. All raw data has been completed.
 </details>
 
-<details><summary>Checkpoint 7: 05/05/2023</summary>
+<details><summary>Checkpoint 7: 04/21/2023</summary>
   
 ***Calculations and Visualizations:***
 Finalize all calculations complete with relevant graphs and other metrics such as mean, standard deviation, and assertion about statisical significance.
@@ -56,9 +56,9 @@ Payday
 ## Installation Instructions
 
 ## Usage Instructions
+<img src="https://user-images.githubusercontent.com/101760285/235547656-4545c51c-d673-4e9c-be55-4a9c90d1f2a1.jpg" width="400">
 
 ## In-App Screenshot Examples
-<img src="https://user-images.githubusercontent.com/101760285/235547656-4545c51c-d673-4e9c-be55-4a9c90d1f2a1.jpg" width="400">
 <img src="https://user-images.githubusercontent.com/101760285/235547679-5e1108e6-b0a3-42e1-a7ba-faca46940b1a.jpg" width="400">
 <img src="https://user-images.githubusercontent.com/101760285/235547689-f75ba7bb-306d-49ef-906c-581a7354ee5a.jpg" width="400">
 <img src="https://user-images.githubusercontent.com/101760285/235547750-0226b21d-f0f3-44ed-9d71-29850812f764.jpg" width="400">
