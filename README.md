@@ -3,6 +3,32 @@
 ## Overview
 When learning CPR we want to see if the average person can benefit more from video observation training (VOT) or virtual reality (VR) training. Each participant provided feedback on meta data as well as subjective measures of their CPR comfort. After taking a pre-training assessment for a base line, everybody will be directed to either VOT or VR training. Thereafter, each participant is given the assessment again to measure their improvement and once again asked about the new CPR comfort level. The independent variable, training method, was measured against both of our two dependent variables, CPR Assessment and CPR Comfort.
 
+## Overview Video
+##### Youtube Link:
+
+
+##### Raw File for downloading:
+
+
+---
+---
+## Presentation Video
+##### Youtube Link:
+https://www.youtube.com/watch?v=abwK2oU7u5g
+
+##### Raw File for downloading:
+https://drive.google.com/file/d/1yvezmA2ID369VppAiQSfbchK6TK-FNHx/view
+
+---
+---
+## Experiment Video
+##### Youtube Link:
+
+
+##### Raw File for downloading:
+
+
+
 ## Timeline
 <sub>_click on checkpoint for details_</sub>
 <details><summary>Checkpoint 1: 02/25/2023</summary>
