@@ -1,0 +1,792 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+from tabulate import tabulate as tab
+
+myFile = "RealData.csv"
+
+# VR == 0
+# VOT == 1
+
+#IMPORT classes/targets
+classes = pd.read_csv(myFile, usecols = [1])
+
+# IMPORT METADATA
+metaData = pd.read_csv(myFile, usecols = [2, 3, 4, 5])
+
+# UPDATE METADATA
+# assign column labels
+column_names = ('Age','Gender','Education','VR Comfort Level')
+metaData.columns = column_names
+
+# Code gender inputs into integers
+metaData.Gender = metaData.Gender.astype("category").cat.codes
+
+# Code education inputs into integers
+metaData.Education = metaData.Education.astype("category").cat.codes
+
+metaData = metaData.to_numpy()
+
+# Code age inputs into integers
+#ageCodes = {'<20':0, '21-25':1, '26-30':2, '31-35':3, '36-40':4, '41-45':5, '46-50':6, '51-55':7, '56+':8}
+
+print("Age | Gender | Education | Pre VR Scale")
+metaData
+
+def TranslateEducation(num):
+  if num==0:
+    num="Some High School"
+  elif num==1:
+    num="High School Diploma"
+  elif num==2:
+    num="Some College"
+  elif num==3:
+    num="Associates Degree"
+  elif num==4:
+    num="Bachelors Degree"
+  elif num==5:
+    num="Masters Degree"
+  else:
+    num="Doctoral Degree"
+  return num
+
+num_participants = metaData.shape[0]
+print("Total Number of Participants: ", num_participants)
+Participants1 = np.count_nonzero(classes)
+Participants0 = num_participants - Participants1
+
+
+MinimumAge = np.min(metaData[:,0])
+MinimumAge = MinimumAge*5+15
+MaximumAge = np.max(metaData[:,0])
+MaximumAge = MaximumAge*5+15
+AverageAge = np.mean(metaData[:,0])
+AverageAge = AverageAge*5+15
+
+
+PercentFemale = (num_participants - np.count_nonzero(metaData[:,1])) / num_participants * 100
+PercentMale = (metaData[:,1][np.where(metaData[:,1]==1)].size) / num_participants * 100
+PercentOther = 100 - PercentFemale - PercentMale
+
+
+MinimumEducation = np.min(metaData[:,2])
+MinimumEducation = TranslateEducation(MinimumEducation)
+MaximumEducation = np.max(metaData[:,2])
+MaximumEducation = TranslateEducation(MaximumEducation)
+AverageEducation = np.round(np.mean(metaData[:,2]))
+AverageEducation = TranslateEducation(AverageEducation)
+
+
+#ParticipantsHeaders = ["",""Participant Quantity"]
+#Participants = np.array([["Participants in Class 0", Participants0], ["Participants in Class 1", Participants1], ["Total Participants", num_participants]])
+
+#ParticipantsMajorHeaders = ["",""Participant Quantity"]
+ParticipantsMinorHeaders = ["", "Qty", "Min Age", "Max Age", "Avg. Age", "Female %", "Male %", "Other Gender %", "Min Education", "Max Education", "Avg. Education", "Min Pre-Assessment Score", "Max Pre-Assessment Score", "Avg. Pre-Assesment Score", "Std. Pre-Assesment Score", "Min Post-Assessment Score", "Max Post-Assessment Score", "Avg. Post-Assesment Score", "Std. Post-Assesment Score"]
+Participants = np.array([["VOT Participants", Participants1, "21", "58", "38", "30", "60", "10", "Some High School", "Doctoral Degree", "Associates Degree", "26.6", "93.3", "51.99", "21.04", "33.3", "100", "77.99", "23.32"], ["VR Participants", Participants0, "21", "56", "37", "50", "50", "0", "High School Diploma", "Masters Degree", "Some College", "20", "80", "49.33", "18.65", "73.3", "93.3", "81.99", "7.06"], ["All Participants", num_participants, "21", "58", "37", "40", "55", "5", "Some High School", "Doctoral Program", "Associates Degree", "20", "93.3", "50.66", "19.39", "33.3", "100", "79.99", "16.89"]])
+
+ParticipantTable = tab(Participants, ParticipantsMinorHeaders, tablefmt="fancy_grid", numalign="center")
+print(ParticipantTable)
+
+# Import CPR Comfort Progression
+CPRComfort = pd.read_csv(myFile, usecols = [6, 22])
+
+# UPDATE CPR Comfort Progression
+# assign column labels
+column_names = ('PRE CPR scale','POST CPR scale')
+CPRComfort.columns = column_names
+CPRComfort = CPRComfort.to_numpy()
+
+progressRaw = np.zeros((num_participants, 1))
+for n in range(num_participants):
+  progressRaw[n] = (CPRComfort[n,1] - CPRComfort[n,0]) * 10
+
+progressRaw.reshape(num_participants, 1)
+
+print("         CPR Start | CPR Finish | CPR Difference")
+
+CPRComfortProgress = np.array((num_participants, 3))
+CPRComfortProgress = np.hstack((CPRComfort, progressRaw))
+CPRComfortProgress
+
+
+
+#Import Pre Test Input
+PreTest = pd.read_csv(myFile, usecols = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21])
+
+#assign column labels
+PreTestColumns = ('PreTest1','PreTest2','PreTest3','PreTest4','PreTest5','PreTest6','PreTest7','PreTest8','PreTest9','PreTest10','PreTest11','PreTest12','PreTest13','PreTest14','PreTest15')
+PreTest.columns = PreTestColumns
+
+#resize data into seperate tests
+SeperatedTestAnswersPreTest = PreTest.values.reshape(num_participants, 1, 15)
+
+#create correct answers
+CorrectTestAnswers = pd.DataFrame([["C", "C", "B", "B", "C", "A", "A", "B", "T", "B", "A", "C", "C", "F", "D"]], columns=PreTest.columns)
+
+#add row of correct answers
+np.insert(SeperatedTestAnswersPreTest[0], 0, CorrectTestAnswers, axis=0)
+
+#concat participant answers, answer key, and correct answers
+ParticipantALLPreTestEval = np.array([])
+
+for i in range(num_participants):
+  InputAndKey = np.array([])
+  InputAndKey = np.insert(SeperatedTestAnswersPreTest[i], 0, CorrectTestAnswers, axis=0)
+  InputAndKey = np.where(InputAndKey == 'A', 1, np.where(InputAndKey == 'B', 2, np.where(InputAndKey == 'C', 3, np.where(InputAndKey == 'D', 4, np.where(InputAndKey == 'F', 6, np.where(InputAndKey == 'T', 7, 0))))))
+  TrueOrFalse = np.reshape(1*(InputAndKey[0] == InputAndKey[1]), (1,15))
+  ParticipantITestResults = np.concatenate((InputAndKey, TrueOrFalse), axis=0)
+  ParticipantALLPreTestEval = np.append(ParticipantALLPreTestEval, ParticipantITestResults)
+
+ParticipantALLPreTestEval = ParticipantALLPreTestEval.reshape(num_participants, 3, 15)
+ParticipantALLPreTestEval
+
+#Import Post Test Input
+PostTest = pd.read_csv(myFile, usecols = [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39])
+
+#assign column labels
+PostTestColumns = ('PostTest1','PostTest2','PostTest3','PostTest4','PostTest5','PostTest6','PostTest7','PostTest8','PostTest9','PostTest10','PostTest11','PostTest12','PostTest13','PostTest14','PostTest15')
+PostTest.columns = PostTestColumns
+
+#resize data into seperate tests
+SeperatedTestAnswersPostTest = PostTest.values.reshape(num_participants, 1, 15)
+
+#add row of correct answers
+np.insert(SeperatedTestAnswersPostTest[0], 0, CorrectTestAnswers, axis=0)
+
+#concat participant answers, answer key, and correct answers
+ParticipantALLPostTestEval = np.array([])
+
+for i in range(num_participants):
+  InputAndKey = np.array([])
+  InputAndKey = np.insert(SeperatedTestAnswersPostTest[i], 0, CorrectTestAnswers, axis=0)
+  InputAndKey = np.where(InputAndKey == 'A', 1, np.where(InputAndKey == 'B', 2, np.where(InputAndKey == 'C', 3, np.where(InputAndKey == 'D', 4, np.where(InputAndKey == 'F', 6, np.where(InputAndKey == 'T', 7, 0))))))
+  TrueOrFalse = np.reshape(1*(InputAndKey[0] == InputAndKey[1]), (1,15))
+  ParticipantITestResults = np.concatenate((InputAndKey, TrueOrFalse), axis=0)
+  ParticipantALLPostTestEval = np.append(ParticipantALLPostTestEval, ParticipantITestResults)
+
+ParticipantALLPostTestEval = ParticipantALLPostTestEval.reshape(num_participants, 3, 15)
+ParticipantALLPostTestEval
+
+classes = classes.to_numpy()
+
+VRPostTestCorrectAnswerQtyByQuestion = np.zeros(15)
+VOTPostTestCorrectAnswerQtyByQuestion = np.zeros(15)
+
+for p in range(len(classes)):
+    if classes[p] == 0:
+        for q in range(15):
+            if ParticipantALLPostTestEval[p,2,q] == 1:
+                VRPostTestCorrectAnswerQtyByQuestion[q] = VRPostTestCorrectAnswerQtyByQuestion[q] + 1
+    if classes[p] == 1:
+        for q in range(15):
+            if ParticipantALLPostTestEval[p,2,q] == 1:
+                VOTPostTestCorrectAnswerQtyByQuestion[q] = VOTPostTestCorrectAnswerQtyByQuestion[q] + 1
+
+print("\n\nAFTER ADDING:")
+print("VR Post Test Correct Answer Qty by question: \n", VRPostTestCorrectAnswerQtyByQuestion)
+print("VOT Post Test Correct Answer Qty by question: \n", VOTPostTestCorrectAnswerQtyByQuestion)
+
+VRPercentOfPartsGotRight = np.zeros(15)
+VOTPercentOfPartsGotRight = np.zeros(15)
+
+for i in range(15):
+  VRPercentOfPartsGotRight[i] = VRPostTestCorrectAnswerQtyByQuestion[i] / Participants0 * 100
+  VOTPercentOfPartsGotRight[i] = VOTPostTestCorrectAnswerQtyByQuestion[i] / Participants1 * 100
+
+plotdata = pd.DataFrame({
+    "VR Participants":VRPercentOfPartsGotRight,
+    "VOT Participants":VOTPercentOfPartsGotRight},
+    index=["Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9", "Q10", "Q11", "Q12", "Q13", "Q14", "Q15"])
+plotdata.plot(kind="bar", color={"VR Participants":"tomato", "VOT Participants":"royalblue"}, edgecolor="white", figsize=(15,8))
+plt.title("Question Accuracy by Class")
+plt.xticks(rotation=0)
+plt.xlabel("Post Test Questions")
+plt.ylabel("Percent Correct")
+plt.show()
+
+overallPercentagesPreANDPost = np.zeros((num_participants, 2))
+percentProgress = np.zeros((num_participants, 1))
+
+for n in range(num_participants):
+  numCorrectPreTest = 0
+  numCorrectPostTest = 0
+
+  for q in range(15):
+    if (ParticipantALLPreTestEval[n,2,q] == 1):
+      numCorrectPreTest = numCorrectPreTest + 1
+    if (ParticipantALLPostTestEval[n,2,q] == 1):
+      numCorrectPostTest = numCorrectPostTest + 1
+    
+  overallPercentagesPreANDPost[n,0] = (numCorrectPreTest / 15) * 100
+  overallPercentagesPreANDPost[n,1] = (numCorrectPostTest / 15) * 100
+  percentProgress[n] = (overallPercentagesPreANDPost[n,1] - overallPercentagesPreANDPost[n,0])
+
+overallPercentagesPrePostProgress = np.hstack((overallPercentagesPreANDPost, percentProgress))
+
+ParticipantPrePostProgress = np.array((num_participants, 4))
+ParticipantPrePostProgress = np.hstack((classes, overallPercentagesPrePostProgress))
+print("           Group #  |    Pretest   |   PostTest  |  Test Progress")
+ParticipantPrePostProgress
+
+class0Results = np.array([])
+class1Results = np.array([])
+class0qty = 0
+class1qty = 0
+
+all0Data = np.array([])
+all1Data = np.array([])
+
+for n in range(num_participants):
+  if ParticipantPrePostProgress[n,0] == 0:
+    class0qty = class0qty + 1
+    class0Results = np.append(class0Results, ParticipantPrePostProgress[n,:])
+    all0Data = np.append(all0Data, ParticipantPrePostProgress[n,:])
+    all0Data = np.append(all0Data, metaData[n,:])
+    all0Data = np.append(all0Data, CPRComfortProgress[n,:])
+
+  else:
+    class1qty = class1qty + 1
+    class1Results = np.append(class1Results, ParticipantPrePostProgress[n,:])
+    all1Data = np.append(all1Data, ParticipantPrePostProgress[n,:])
+    all1Data = np.append(all1Data, metaData[n,:])
+    all1Data = np.append(all1Data, CPRComfortProgress[n,:])
+
+class0Results = class0Results.reshape(class0qty, 4)
+class1Results = class1Results.reshape(class1qty, 4)
+all0Data = all0Data.reshape(class0qty, 11)
+all1Data = all1Data.reshape(class1qty, 11)
+
+print("Class 0:")
+print("  Group #  |    Pretest   |   PostTest  |  Test Progress")
+print(class0Results.shape)
+print(class0Results)
+
+print("Class 1:")
+print("  Group #  |    Pretest   |   PostTest  |  Test Progress")
+print(class1Results.shape)
+print(class1Results)
+
+print("Class | PreTest | PostTest | TestProgress | Age | Gender | Education | Pre VR Scale | CPR Start | CPR End | CPR Progress")
+
+print("All 0 Data:")
+print(all0Data.shape)
+print(all0Data)
+
+print("All 1 Data:")
+print(all1Data.shape)
+print(all1Data)
+
+class0avgPreTestScore = np.mean(class0Results[:, 1])
+class0avgPostTestScore = np.mean(class0Results[:, 2])
+class1avgPreTestScore = np.mean(class1Results[:, 1])
+class1avgPostTestScore = np.mean(class1Results[:, 2])
+
+class0stdPreTestScore = np.std(class0Results[:, 1])
+class0stdPostTestScore = np.std(class0Results[:, 2])
+class1stdPreTestScore = np.std(class1Results[:, 1])
+class1stdPostTestScore = np.std(class1Results[:, 2])
+
+#class0avgPreTestScore, class0avgPostTestScore, class1avgPreTestScore, class1avgPostTestScore
+
+class0avgPreCPR = np.mean(all0Data[:, 8])
+class0avgPostCPR = np.mean(all0Data[:, 9])
+class1avgPreCPR = np.mean(all1Data[:, 8])
+class1avgPostCPR = np.mean(all1Data[:, 9])
+
+class0stdPreCPR = np.std(all0Data[:, 8])
+class0stdPostCPR = np.std(all0Data[:, 9])
+class1stdPreCPR = np.std(all1Data[:, 8])
+class1stdPostCPR = np.std(all1Data[:, 9])
+
+class0avgPreTestScore, class0avgPostTestScore, class1avgPreTestScore, class1avgPostTestScore
+
+class0stdPreTestScore, class0stdPostTestScore, class1stdPreTestScore, class1stdPostTestScore
+
+from matplotlib.projections.geo import Affine2D
+from matplotlib.transforms import ScaledTranslation
+
+N = 2
+PreTestMeans = (class0avgPreTestScore, class1avgPreTestScore)
+PostTestMeans = (class0avgPostTestScore, class1avgPostTestScore)
+PreTestStd = (class0stdPreTestScore, class1stdPreTestScore)
+PostTestStd = (class0stdPostTestScore, class1stdPostTestScore)
+ind = np.arange(N)
+width = .5
+
+fig, ax = plt.subplots(figsize=(7, 10))
+
+trans1 = Affine2D().translate(-0.1, 0.0) + ax.transData
+trans2 = Affine2D().translate(0.1, 0.0) + ax.transData
+
+p1 = plt.bar(ind, PostTestMeans, width, capsize=4, color="royalblue")
+p2 = plt.bar(ind, PreTestMeans, width, capsize=4, color="tomato")
+
+ax.errorbar(ind, PreTestMeans, yerr=PreTestStd, linestyle="none", ecolor="black", capsize=4, transform=trans1)
+ax.errorbar(ind, PostTestMeans, yerr=PostTestStd, linestyle="none", ecolor="black", capsize=4, transform=trans2)
+
+plt.ylabel('Average Test Scores', size=12)
+plt.xlabel('Training Method', size=12)
+plt.title('Pretest Scores and PostTest Scores by Training Method', size=15)
+plt.xticks(ind, ('VR', 'VOT'))
+plt.yticks(np.arange(0, 101, 10))
+plt.legend((p1[0], p2[0]), ('Post Test', 'Pre Test'))
+
+plt.grid()
+
+plt.show()
+
+class0avgPreCPR, class0avgPostCPR, class1avgPreCPR, class1avgPostCPR
+
+class0stdPreCPR, class0stdPostCPR, class1stdPreCPR, class1stdPostCPR
+
+N = 2
+PreCPRMeans = (class0avgPreCPR, class1avgPreCPR)
+PostCPRMeans = (class0avgPostCPR, class1avgPostCPR)
+PreCPRStd = (class0stdPreCPR, class1stdPreCPR)
+PostCPRStd = (class0stdPostCPR, class1stdPostCPR)
+ind = np.arange(N)
+width = .5
+
+fig, ax = plt.subplots(figsize=(7, 10))
+
+trans1 = Affine2D().translate(-0.1, 0.0) + ax.transData
+trans2 = Affine2D().translate(0.1, 0.0) + ax.transData
+
+p1 = plt.bar(ind, PostCPRMeans, width, capsize=4, color="royalblue")
+p2 = plt.bar(ind, PreCPRMeans, width, capsize=4, color="tomato")
+
+ax.errorbar(ind, PreCPRMeans, yerr=PreCPRStd, linestyle="none", ecolor="black", capsize=4, transform=trans1)
+ax.errorbar(ind, PostCPRMeans, yerr=PostCPRStd, linestyle="none", ecolor="black", capsize=4, transform=trans2)
+
+plt.ylabel('Average CPR Comfort Progress', size=12)
+plt.xlabel('Training Method', size=12)
+plt.title('Pre Training CPR Comfort Level vs Post Training CPR Comfort by Training Method', size=14)
+plt.xticks(ind, ('VR', 'VOT'))
+plt.yticks(np.arange(0, 9.1, 1))
+plt.legend((p1[0], p2[0]), ('Post Test', 'Pre Test'))
+
+plt.grid()
+
+plt.show()
+
+N = 2
+PreTestMeans = (class0avgPreTestScore, class1avgPreTestScore)
+PostTestMeans = (class0avgPostTestScore - class0avgPreTestScore, class1avgPostTestScore - class1avgPreTestScore)
+PreTestStd = (class0stdPreTestScore, class1stdPreTestScore)
+PostTestStd = (class0stdPostTestScore, class1stdPostTestScore)
+ind = np.arange(N)
+width = .5
+methods = ("VOT", "VR")
+
+fig, ax = plt.subplots(figsize=(10, 7))
+
+trans1 = Affine2D().translate(0.0, -0.1) + ax.transData
+trans2 = Affine2D().translate(0.0, 0.1) + ax.transData
+
+p1 = plt.barh(PreTestMeans, ind, width, capsize=4)
+p2 = plt.barh(PostTestMeans, ind, width, capsize=4)
+
+ax.errorbar(ind, PreTestMeans, yerr=PreTestStd, linestyle="none", ecolor="black", capsize=4, transform=trans1)
+ax.errorbar(ind, PostTestMeans, yerr=PostTestStd, linestyle="none", ecolor="black", capsize=4, transform=trans2)
+
+plt.ylabel('Training Method')
+plt.title('Pretest Scores and PostTest Scores by Training Method')
+plt.xticks(ind, ('VR', 'VOT'))
+plt.yticks(np.arange(0, 81, 10))
+plt.legend((p1[0], p2[0]), ('Pre Test', 'Post Test'))
+
+plt.show()
+
+class0MeanAge = all0Data[:,4].mean()
+class1MeanAge = all1Data[:,4].mean()
+
+print("Average age in class 0 | Average age in class 1")
+class0MeanAge, class1MeanAge
+
+numClass0Participants = class0Results.shape[0]
+numClass1Participants = class1Results.shape[0]
+
+class0MeanScoresAndProgress = np.array([])
+class0MeanScoresAndProgress = class0Results.mean(axis=0)
+class0MeanPreTestScore = class0MeanScoresAndProgress[1]
+class0MeanPostTestScore = class0MeanScoresAndProgress[2]
+class0MeanProgress = class0MeanScoresAndProgress[3]
+
+class1MeanScoresAndProgress = np.array([])
+class1MeanScoresAndProgress = class1Results.mean(axis=0)
+class1MeanPreTestScore = class1MeanScoresAndProgress[1]
+class1MeanPostTestScore = class1MeanScoresAndProgress[2]
+class1MeanProgress = class1MeanScoresAndProgress[3]
+
+plt.plot(class0Results[:,1], '--', marker="s", color="tomato", label="Pre Test Results")
+plt.plot(class0Results[:,2], '--', marker="o", color="royalblue", label="Post Test Results")
+plt.title("VR Test Results", size=14)
+plt.xticks(np.arange(len(class0Results[:,1])), np.arange(1, len(class0Results[:,1])+1))
+plt.xlabel("Participants")
+plt.ylabel("Percent Accurate")
+
+plt.legend()
+plt.show()
+
+plt.plot(class1Results[:,1], '--', marker="s", color="tomato", label="Pre Test Results")
+plt.plot(class1Results[:,2], '--', marker="o", color="royalblue", label="Post Test Results")
+plt.title("VOT Test Results", size=14)
+plt.xticks(np.arange(len(class1Results[:,1])), np.arange(1, len(class1Results[:,1])+1))
+plt.xlabel("Participants")
+plt.ylabel("Percent Accurate")
+plt.legend()
+plt.show()
+
+plt.plot(class0Results[:,1], color="tomato", linestyle="--", marker="s", label="VR Pre Test Results")
+plt.plot(class0Results[:,2], color="orangered", linestyle="-", marker="s", label="VR Post Test Results")
+plt.plot(class1Results[:,1], color="cornflowerblue", linestyle="--", marker="o", label="VOT Pre Test Results")
+plt.plot(class1Results[:,2], color="royalblue", linestyle="-", marker="o", label="VOT Post Test Results")
+plt.title("All Test Results by Training Method", size=14)
+plt.xticks(np.arange(len(class0Results[:,1])), np.arange(1, len(class0Results[:,1])+1))
+plt.xlabel("Participants")
+plt.ylabel("Percent Accurate")
+plt.legend()
+plt.show()
+
+plt.plot(np.sort(class0Results[:,3]), '--', marker="s", color="tomato", label="VR Progress")
+plt.plot(np.sort(class1Results[:,3]), '--', marker="o", color="royalblue", label="VOT Progress")
+plt.title("Test Progress by Class", size=14)
+plt.xticks(np.arange(len(class1Results[:,1])), np.arange(1, len(class1Results[:,1])+1))
+plt.xlabel("Class Participants")
+plt.ylabel("Progress from Pre Test to Post Test (%)")
+plt.legend()
+plt.show()
+
+metaData.shape, CPRComfortProgress[:,2].shape, ParticipantPrePostProgress[:,3].shape
+metaDataAndProgress = np.hstack((metaData, CPRComfortProgress[:,2].reshape((-1,1)), ParticipantPrePostProgress[:,3].reshape((-1,1))))
+
+metaProgClass = np.hstack((metaDataAndProgress, classes))
+
+metaProgClass0 = np.array([])
+metaProgClass1 = np.array([])
+
+for n in range(num_participants):
+  if metaProgClass[n,6] == 0:
+    metaProgClass0 = np.append(metaProgClass0, metaProgClass[n,:])
+  else:
+    metaProgClass1 = np.append(metaProgClass1, metaProgClass[n,:])
+
+metaProgClass0 = metaProgClass0.reshape(class0qty, 7)
+metaProgClass1 = metaProgClass1.reshape(class1qty, 7)
+
+print("Age  |   Gender  |  Education  |  PRE VR   | CPR Prgress  |  Test Progress   |   class")
+metaProgClass0, metaProgClass1
+
+ProgressAndAgeC0 = np.vstack((metaProgClass0[:,0], metaProgClass0[:,5]))
+ProgressAndAgeC1 = np.vstack((metaProgClass1[:,0], metaProgClass1[:,5]))
+
+ProgAgeC0 = np.zeros((class0qty, 2))
+ProgAgeC1 = np.zeros((class1qty, 2))
+
+for n in range(class0qty):
+  ProgAgeC0[n,0] = ProgressAndAgeC0[0, n]
+  ProgAgeC0[n,1] = ProgressAndAgeC0[1, n]
+
+for n in range(class1qty):
+  ProgAgeC1[n,0] = ProgressAndAgeC1[0, n]
+  ProgAgeC1[n,1] = ProgressAndAgeC1[1, n]
+
+ProgressAndAgeSortedC0 = ProgAgeC0[ProgAgeC0[:,0].argsort()]
+ProgressAndAgeSortedC1 = ProgAgeC1[ProgAgeC1[:,0].argsort()]
+
+AgeLabels = ['<20', '21-25', '26-30', '31-35', '36-40', '41-45', '46-50', '51-55', '56+']
+
+fig, axs = plt.subplots(1, 3, figsize=(15, 5), sharey=True)
+fig.suptitle("Test Progress vs Age by Training Method")
+
+axs[0].set_title("VR Participants")
+axs[0].scatter(ProgressAndAgeSortedC0[:,0], ProgressAndAgeSortedC0[:,1], marker='^', label="VR", color="tomato")
+axs[0].set_xlabel("Age")
+axs[0].set_xticks(np.arange(9), AgeLabels, rotation=70)
+axs[0].set_ylabel("Test Progress (%)")
+
+axs[1].set_title("VOT Participants")
+axs[1].scatter(ProgressAndAgeSortedC1[:,0], ProgressAndAgeSortedC1[:,1], marker='P', label="VOT", color="royalblue")
+axs[1].set_xlabel("Age")
+axs[1].set_xticks(np.arange(9), AgeLabels, rotation=70)
+axs[1].set_ylabel("Test Progress (%)")
+
+axs[2].set_title("Both Classes")
+axs[2].scatter(ProgressAndAgeSortedC0[:,0], ProgressAndAgeSortedC0[:,1], marker='^', label="VR", color="tomato")
+axs[2].scatter(ProgressAndAgeSortedC1[:,0], ProgressAndAgeSortedC1[:,1], marker='P', label="VOT", color="royalblue")
+axs[2].set_xlabel("Age")
+axs[2].set_xticks(np.arange(9), AgeLabels, rotation=70)
+axs[2].set_ylabel("Test Progress (%)")
+axs[2].legend()
+
+plt.show()
+
+ProgressAndGenC0 = np.vstack((metaProgClass0[:,1], metaProgClass0[:,5]))
+ProgressAndGenC1 = np.vstack((metaProgClass1[:,1], metaProgClass1[:,5]))
+
+ProgGenC0 = np.zeros((class0qty, 2))
+ProgGenC1 = np.zeros((class1qty, 2))
+
+for n in range(class0qty):
+  ProgGenC0[n,0] = ProgressAndGenC0[0, n]
+  ProgGenC0[n,1] = ProgressAndGenC0[1, n]
+
+for n in range(class1qty):
+  ProgGenC1[n,0] = ProgressAndGenC1[0, n]
+  ProgGenC1[n,1] = ProgressAndGenC1[1, n]
+
+ProgressAndGenSortedC0 = ProgGenC0[ProgGenC0[:,0].argsort()]
+ProgressAndGenSortedC1 = ProgGenC1[ProgGenC1[:,0].argsort()]
+
+GenLabels = ['Female', 'Male', 'Other']
+
+fig, axs = plt.subplots(1, 3, figsize=(15, 5), sharey=True)
+fig.suptitle("Test Progress vs Gender by Training Method")
+
+axs[0].set_title("VR Participants")
+axs[0].scatter(ProgressAndGenSortedC0[:,0], ProgressAndGenSortedC0[:,1], marker='^', color="tomato")
+axs[0].set_xlabel("Gender")
+axs[0].set_xticks(np.arange(3), GenLabels, rotation=70)
+axs[0].set_ylabel("Test Progress (%)")
+
+axs[1].set_title("VOT Participants")
+axs[1].scatter(ProgressAndGenSortedC1[:,0], ProgressAndGenSortedC1[:,1], marker='P', color="royalblue")
+axs[1].set_xlabel("Gender")
+axs[1].set_xticks(np.arange(3), GenLabels, rotation=70)
+axs[1].set_ylabel("Test Progress (%)")
+
+axs[2].set_title("Both Classes")
+axs[2].scatter(ProgressAndGenSortedC0[:,0], ProgressAndGenSortedC0[:,1], marker='^', label="VR", color="tomato")
+axs[2].scatter(ProgressAndGenSortedC1[:,0], ProgressAndGenSortedC1[:,1], marker='P', label="VOT", color="royalblue")
+axs[2].set_xlabel("Gender")
+axs[2].set_xticks(np.arange(3), GenLabels, rotation=70)
+axs[2].set_ylabel("Test Progress (%)")
+axs[2].legend()
+
+plt.show()
+
+ProgressAndEducationC0 = np.vstack((metaProgClass0[:,2], metaProgClass0[:,5]))
+ProgressAndEducationC1 = np.vstack((metaProgClass1[:,2], metaProgClass1[:,5]))
+
+ProgEduC0 = np.zeros((class0qty, 2))
+ProgEduC1 = np.zeros((class1qty, 2))
+
+for n in range(class0qty):
+  ProgEduC0[n,0] = ProgressAndEducationC0[0, n]
+  ProgEduC0[n,1] = ProgressAndEducationC0[1, n]
+
+for n in range(class1qty):
+  ProgEduC1[n,0] = ProgressAndEducationC1[0, n]
+  ProgEduC1[n,1] = ProgressAndEducationC1[1, n]
+
+ProgressAndEduSortedC0 = ProgEduC0[ProgEduC0[:,0].argsort()]
+ProgressAndEduSortedC1 = ProgEduC1[ProgEduC1[:,0].argsort()]
+
+EduLabels = ['Some High School', 'High School Diploma', 'Some College', 'Associates Degree', 'Bachelors Degree', 'Masters Degree', 'Doctoral Degree']
+
+fig, axs = plt.subplots(1, 3, figsize=(15, 5), sharey=True)
+fig.suptitle("Test Progress vs Education Level by Training Method")
+
+axs[0].set_title("VR Participants")
+axs[0].scatter(ProgressAndEduSortedC0[:,0], ProgressAndEduSortedC0[:,1], marker='^', color="tomato")
+axs[0].set_xlabel("Education Level")
+axs[0].set_xticks(np.arange(7), EduLabels, rotation=70)
+axs[0].set_ylabel("Test Progress (%)")
+
+axs[1].set_title("VOT Participants")
+axs[1].scatter(ProgressAndEduSortedC1[:,0], ProgressAndEduSortedC1[:,1], marker='P', color="royalblue")
+axs[1].set_xlabel("Education Level")
+axs[1].set_xticks(np.arange(7), EduLabels, rotation=70)
+axs[1].set_ylabel("Test Progress (%)")
+
+axs[2].set_title("Both Classes")
+axs[2].scatter(ProgressAndEduSortedC0[:,0], ProgressAndEduSortedC0[:,1], marker='^', label="VR", color="tomato")
+axs[2].scatter(ProgressAndEduSortedC1[:,0], ProgressAndEduSortedC1[:,1], marker='P', label="VOT", color="royalblue")
+axs[2].set_xlabel("Education Level")
+axs[2].set_xticks(np.arange(7), EduLabels, rotation=70)
+axs[2].set_ylabel("Test Progress (%)")
+axs[2].legend()
+
+plt.show()
+
+ProgressAndVRComfortC0 = np.vstack((metaProgClass0[:,3], metaProgClass0[:,5]))
+ProgressAndVRComfortC1 = np.vstack((metaProgClass1[:,3], metaProgClass1[:,5]))
+
+ProgVRCC0 = np.zeros((class0qty, 2))
+ProgVRCC1 = np.zeros((class1qty, 2))
+
+for n in range(class0qty):
+  ProgVRCC0[n,0] = ProgressAndVRComfortC0[0, n]
+  ProgVRCC0[n,1] = ProgressAndVRComfortC0[1, n]
+
+for n in range(class1qty):
+  ProgVRCC1[n,0] = ProgressAndVRComfortC1[0, n]
+  ProgVRCC1[n,1] = ProgressAndVRComfortC1[1, n]
+
+ProgressAndVRCSortedC0 = ProgVRCC0[ProgVRCC0[:,0].argsort()]
+ProgressAndVRCSortedC1 = ProgVRCC1[ProgVRCC1[:,0].argsort()]
+
+fig, axs = plt.subplots(1, 3, figsize=(15, 5), sharey=True)
+fig.suptitle("Test Progress vs VR Comfort Progress by Training Method")
+
+axs[0].set_title("VR Participants")
+axs[0].scatter(ProgressAndVRCSortedC0[:,0], ProgressAndVRCSortedC0[:,1], marker='^', color="tomato")
+axs[0].set_xlabel("VR Comfort Level")
+axs[0].set_ylabel("Test Progress (%)")
+
+axs[1].set_title("VOT Participants")
+axs[1].scatter(ProgressAndVRCSortedC1[:,0], ProgressAndVRCSortedC1[:,1], marker='P', color="royalblue")
+axs[1].set_xlabel("VR Comfort Level")
+axs[1].set_ylabel("Test Progress (%)")
+
+axs[2].set_title("Both Classes")
+axs[2].scatter(ProgressAndVRCSortedC0[:,0], ProgressAndVRCSortedC0[:,1], marker='^', label="VR", color="tomato")
+axs[2].scatter(ProgressAndVRCSortedC1[:,0], ProgressAndVRCSortedC1[:,1], marker='P', label="VOT", color="royalblue")
+axs[2].set_xlabel("VR Comfort Level")
+axs[2].set_ylabel("Test Progress (%)")
+axs[2].legend()
+
+plt.show()
+
+ProgressAndCPRComfortRawC0 = np.vstack((all0Data[:,9], metaProgClass0[:,5]))
+ProgressAndCPRComfortRawC1 = np.vstack((all1Data[:,9], metaProgClass1[:,5]))
+
+CPRRawTestProgress0 = np.zeros((class0qty, 2))
+CPRRawTestProgress1 = np.zeros((class1qty, 2))
+
+# ProgressAndCPRComfortRawC0, ProgressAndCPRComfortRawC1
+
+for n in range(class0qty):
+  CPRRawTestProgress0[n,0] = ProgressAndCPRComfortRawC0[0, n]
+  CPRRawTestProgress0[n,1] = ProgressAndCPRComfortRawC0[1, n]
+
+for n in range(class1qty):
+  CPRRawTestProgress1[n,0] = ProgressAndCPRComfortRawC1[0, n]
+  CPRRawTestProgress1[n,1] = ProgressAndCPRComfortRawC1[1, n]
+
+CPRRawTestProgress0, CPRRawTestProgress1
+
+# ProgressAndCPRCSortedC0 = ProgCPRCC0[ProgCPRCC0[:,0].argsort()]
+# ProgressAndCPRCSortedC1 = ProgCPRCC1[ProgCPRCC1[:,0].argsort()]
+
+fig, axs = plt.subplots(1, 3, figsize=(15, 5), sharey=True)
+fig.suptitle("Test Progress vs Final CPR Comfort by Training Method")
+
+axs[0].set_title("VR Participants")
+axs[0].scatter(CPRRawTestProgress0[:,0], CPRRawTestProgress0[:,1], marker='^', color="tomato")
+axs[0].set_xlabel("CPR Comfort Level")
+axs[0].set_ylabel("Test Progress (%)")
+
+axs[1].set_title("VOT Participants")
+axs[1].scatter(CPRRawTestProgress1[:,0], CPRRawTestProgress1[:,1], marker='P', color="royalblue")
+axs[1].set_xlabel("CPR Comfort Level")
+axs[1].set_ylabel("Test Progress (%)")
+
+axs[2].set_title("Both Classes")
+axs[2].scatter(CPRRawTestProgress0[:,0], CPRRawTestProgress0[:,1], marker='^', label="VR", color="tomato")
+axs[2].scatter(CPRRawTestProgress1[:,0], CPRRawTestProgress1[:,1], marker='P', label="VOT", color="royalblue")
+axs[2].set_xlabel("CPR Comfort Level")
+axs[2].set_ylabel("Test Progress (%)")
+axs[2].legend()
+
+plt.show()
+
+ProgressAndCPRComfortC0 = np.vstack((metaProgClass0[:,4], metaProgClass0[:,5]))
+ProgressAndCPRComfortC1 = np.vstack((metaProgClass1[:,4], metaProgClass1[:,5]))
+
+ProgCPRCC0 = np.zeros((class0qty, 2))
+ProgCPRCC1 = np.zeros((class1qty, 2))
+
+for n in range(class0qty):
+  ProgCPRCC0[n,0] = ProgressAndCPRComfortC0[0, n]
+  ProgCPRCC0[n,1] = ProgressAndCPRComfortC0[1, n]
+
+for n in range(class1qty):
+  ProgCPRCC1[n,0] = ProgressAndCPRComfortC1[0, n]
+  ProgCPRCC1[n,1] = ProgressAndCPRComfortC1[1, n]
+
+
+ProgressAndCPRCSortedC0 = ProgCPRCC0[ProgCPRCC0[:,0].argsort()]
+ProgressAndCPRCSortedC1 = ProgCPRCC1[ProgCPRCC1[:,0].argsort()]
+
+fig, axs = plt.subplots(1, 1, figsize=(15, 5), sharey=True)
+fig.suptitle("PreTest vs PostTest Score Difference vs Overall CPR Comfort Progress", size=19)
+
+#a, b = np.polyfit(ProgressAndCPRCSortedC0[1:,0], ProgressAndCPRCSortedC0[1:,1], 1)
+#c, d = np.polyfit(ProgressAndCPRCSortedC1[:-1,0], ProgressAndCPRCSortedC1[:-1,1], 1)
+
+axs.scatter(ProgressAndCPRCSortedC0[:,0], ProgressAndCPRCSortedC0[:,1], marker='^', label="VR", color="tomato", s=50)
+axs.scatter(ProgressAndCPRCSortedC1[:,0], ProgressAndCPRCSortedC1[:,1], marker='P', label="VOT", color="royalblue", s=50)
+
+
+axs.axline(xy1=(-67,0), xy2=(52,40), color="tomato", linestyle='--', linewidth=2)
+axs.axline(xy1=(-25,15), xy2=(66,50), color="royalblue", linestyle='--', linewidth=2)
+
+
+axs.set_yticks(np.arange(0, 71, step=10))
+axs.set_xlabel("CPR Comfort Percent Difference", size=12)
+axs.set_xticks(np.arange(-95, 96, step=10))
+axs.set_ylabel("Test Percent Difference", size=12)
+axs.legend()
+
+plt.grid()
+plt.show()
+
+ProgressAndVRComfortC0 = np.vstack((all0Data[:,7], metaProgClass0[:,5]))
+ProgVRC0 = np.zeros((class0qty, 2))
+
+for n in range(class0qty):
+  ProgVRC0[n,0] = ProgressAndVRComfortC0[0, n]
+  ProgVRC0[n,1] = ProgressAndVRComfortC0[1, n]
+  
+ProgressAndVRCSortedC0 = ProgVRC0[ProgVRC0[:,0].argsort()]
+
+fig, axs = plt.subplots(1, 1, figsize=(15, 5), sharey=True)
+fig.suptitle("PreTest vs PostTest Score Difference vs Initial VR Comfort Progress", size=19)
+
+#a, b = np.polyfit(ProgressAndVRCSortedC0[1:,0], ProgressAndVRCSortedC0[1:,1], 1)
+#axs.plot(ProgressAndVRCSortedC0[1:,0], a*ProgressAndVRCSortedC0[1:,0]+b)
+
+axs.scatter(ProgressAndVRCSortedC0[:,0], ProgressAndVRCSortedC0[:,1], marker='^', label="VR", color="tomato", s=50)
+
+axs.axline(xy1=(2,34.3), xy2=(10,32.5), color="tomato", linestyle='--', linewidth=2)
+
+
+axs.set_yticks(np.arange(0, 71, step=10))
+axs.set_xlabel("Initial VR Comfort", size=12)
+axs.set_xticks(np.arange(0, 11, step=1))
+axs.set_ylabel("Test Percent Difference", size=12)
+axs.legend()
+
+plt.grid()
+plt.show()
+
+
+PostTestAndVRComfortC0 = np.vstack((all0Data[:,7], metaProgClass0[:,5]))
+ProgVRC0 = np.zeros((class0qty, 2))
+
+for n in range(class0qty):
+  ProgVRC0[n,0] = ProgressAndVRComfortC0[0, n]
+  ProgVRC0[n,1] = ProgressAndVRComfortC0[1, n]
+  
+ProgressAndVRCSortedC0 = ProgVRC0[ProgVRC0[:,0].argsort()]
+
+fig, axs = plt.subplots(1, 1, figsize=(15, 5), sharey=True)
+fig.suptitle("PreTest vs PostTest Score Difference vs Initial VR Comfort Progress", size=19)
+
+#a, b = np.polyfit(ProgressAndVRCSortedC0[1:,0], ProgressAndVRCSortedC0[1:,1], 1)
+#axs.plot(ProgressAndVRCSortedC0[1:,0], a*ProgressAndVRCSortedC0[1:,0]+b)
+
+axs.scatter(ProgressAndVRCSortedC0[:,0], ProgressAndVRCSortedC0[:,1], marker='^', label="VR", color="tomato", s=50)
+
+axs.axline(xy1=(2,34.3), xy2=(10,32.5), color="tomato", linestyle='--', linewidth=2)
+
+
+axs.set_yticks(np.arange(0, 71, step=10))
+axs.set_xlabel("Initial VR Comfort", size=12)
+axs.set_xticks(np.arange(0, 11, step=1))
+axs.set_ylabel("Test Percent Difference", size=12)
+axs.legend()
+
+plt.grid()
+plt.show()
