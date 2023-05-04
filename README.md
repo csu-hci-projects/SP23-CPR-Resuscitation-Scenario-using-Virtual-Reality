@@ -57,7 +57,7 @@ Payday
 </details>
 
 ## Installation Instructions
-https://github.com/csu-hci-projects/SP23-CPR-Resuscitation-Scenario-using-Virtual-Reality/tree/main/Final%20Build#readme
+https://github.com/csu-hci-projects/SP23-CPR-Resuscitation-Scenario-using-Virtual-Reality/tree/main/SourceCode
 
 ## Usage Instructions
 When you run the code, the very first screen is displayed below. The researcher manually chose the group assignment on a rotating schedule.  The "Test Only" option was provided for code testing and debugging purposes. Once the researcher selected one of the options, it would go to the next slide and authority was passed on to the participant starting on the 2nd screen.  
